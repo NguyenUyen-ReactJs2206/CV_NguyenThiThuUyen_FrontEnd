@@ -31,7 +31,7 @@ export default function Main() {
                   <h2 className='py-2 text-2xl font-semibold'>Nguyễn Thị Thu Uyên</h2>
                   <div className='py-1'>
                     <h4 className='text-xl'> Front-end Developer</h4>
-                    <p className='py-2 '>
+                    <p className='py-2 lg:text-base text-sm'>
                       Hi, I'm a front-end developer. I can learn to code and fix error codes for hours until all these
                       unexpected errors are resolved. Before that, I was a bachelor in business administration. Ever
                       since I was exposed to the IT industry, I knew I belonged in this world. In the past year, I have
@@ -42,18 +42,28 @@ export default function Main() {
                   <h2 className='py-2 text-2xl font-semibold'>Education</h2>
                   <div className='py-1'>
                     <h4 className='text-xl font-semibold'>Front-end</h4>
-                    <p>Front-end training course at T3H Information Technology Institute.</p>
-                    <p>Front-end training course of Du Thanh Duoc.</p>
+                    <p className='lg:text-base text-sm'>
+                      Front-end training course at T3H Information Technology Institute.
+                    </p>
+                    <p className='lg:text-base text-sm'>Front-end training course of Du Thanh Duoc.</p>
                   </div>
                   <div className='py-1'>
                     <h4 className='text-xl font-semibold'>Back-end</h4>
-                    <p>Back-end training course of Du Thanh Duoc.</p>
+                    <p className='lg:text-base text-sm'>Back-end training course of Du Thanh Duoc.</p>
+                  </div>
+                  <div className='py-4'>
+                    <div className='flex'>
+                      <a href={cvFile} className='' download='CV-FrontEnd-Nguyen-Thi-Thu-Uyen'>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>Download CV
+                      </a>
+                      <button></button>
+                    </div>
                   </div>
                 </div>
               </div>
-              <a href={cvFile} className='' download='CV-FrontEnd-Nguyen-Thi-Thu-Uyen'>
-                Download CV
-              </a>
             </div>
           </div>
         </div>
