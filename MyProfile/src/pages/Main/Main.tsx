@@ -1,14 +1,17 @@
-import '../../sass/main.scss'
+import '../../sass/index.scss'
 import avatar from '../../assets/images/avatar-main.jpg'
 import avatarAbout from '../../assets/images/avatar.jpg'
 import cvFile from '../../assets/files/CV-Frontend-ReactJs-NguyenThiThuUyen (2).pdf'
 import { Link } from 'react-scroll'
+
 export default function Main() {
   return (
     <div className='my-profile'>
       <div id='top'>
         <div className='grid grid-cols-12'>
-          <div className='xl:col-span-3 xl:block hidden min-h-[100vh]'>aa</div>
+          <div className='xl:col-span-3 xl:block hidden h-[100vh] w-full bg-slate-100'>
+            <div className='fixed xl:w-[25%] h-[100vh] z-1 bg-gray-900 text-white animation-left__side--nav'>aa</div>
+          </div>
           <div className='xl:col-span-9 col-span-12'>
             <div className='home flex bg-black items-center justify-center min-h-[100vh] w-full'>
               <div className='container text-white px-8 text-center'>

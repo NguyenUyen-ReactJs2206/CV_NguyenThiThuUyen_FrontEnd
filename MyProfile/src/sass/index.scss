@@ -1,3 +1,5 @@
+/**-------------------Component Main------------------**/
+
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -25,6 +27,20 @@
   }
 }
 
+@keyframes moveInLeftForSideNav {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  // 80% {
+  //   transform: translateX(0);
+  // }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .animation-right {
   animation: moveInRight 1s ease-out;
 }
@@ -33,6 +49,10 @@
   animation: moveInLeft 1s ease-out;
 }
 
+.animation-left__side--nav {
+  animation: moveInLeftForSideNav 1s ease-out;
+}
+/************************/
 a {
   position: relative;
   color: #34ffea;
