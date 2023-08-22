@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function FormContact() {
   return (
     <div>
@@ -9,7 +7,7 @@ export default function FormContact() {
             <input
               placeholder="Your name or Company's name"
               type='text'
-              className='w-full border border-blue/80 px-4 py-6 text-lg outline-none focus:outline-blue'
+              className='w-full border border-blue/80 px-4 py-4 text-lg outline-none focus:outline-blue'
             />
           </div>
 
@@ -17,20 +15,20 @@ export default function FormContact() {
             <input
               placeholder='Your phone number'
               type='text'
-              className='w-full border border-blue/80 px-4 py-6 text-lg outline-none focus:outline-blue'
+              className='w-full border border-blue/80 px-4 py-4 text-lg outline-none focus:outline-blue'
             />
           </div>
           <div className='col-span-2 md:col-span-1'>
             <input
               placeholder='Your Email'
               type='text'
-              className='w-full border border-blue/80 px-4 py-6 text-lg outline-none focus:outline-blue'
+              className='w-full border border-blue/80 px-4 py-4 text-lg outline-none focus:outline-blue'
             />
           </div>
           <div className='col-span-2'>
             <textarea
               placeholder='Your Message'
-              className='w-full border border-blue/80 px-4 py-6 text-lg outline-none focus:outline-blue'
+              className='w-full border border-blue/80 px-4 py-4 text-lg outline-none focus:outline-blue'
               rows={4}
             ></textarea>
             <div className='mt-1 min-h-[17px] text-sm text-red-600'></div>
@@ -40,7 +38,7 @@ export default function FormContact() {
               type='submit'
               className='mt-4 w-full bg-blue/80 px-4 py-4 text-lg uppercase text-white outline-none transition-all duration-300 hover:bg-blue hover:duration-300 sm:mt-6'
             >
-              Submit
+              Send
             </button>
           </div>
         </div>
