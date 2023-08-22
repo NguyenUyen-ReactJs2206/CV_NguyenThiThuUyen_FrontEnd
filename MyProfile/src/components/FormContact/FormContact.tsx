@@ -3,7 +3,7 @@ import React from 'react'
 export default function FormContact() {
   return (
     <div>
-      <form className='bg-blue/10 py-20 text-center sm:px-6 md:px-10 lg:px-16 xl:px-20'>
+      <form className='bg-slate-100 py-20 text-center px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20'>
         <div className='grid grid-cols-2 gap-x-6 gap-y-4'>
           <div className='col-span-2'>
             <input

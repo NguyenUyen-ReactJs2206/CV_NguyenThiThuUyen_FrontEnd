@@ -42,7 +42,7 @@ export default function Main() {
             </div>
             <div className='about px-4 py-16 min-h-[100vh]'>
               <div className='container mx-auto text-center '>
-                <h2 className='text-4xl font-semibold py-8'>About</h2>
+                <h2 className='text-4xl font-semibold py-8 text-blue'>About</h2>
                 <div className='flex'>
                   <img
                     src={avatarAbout}
@@ -83,12 +83,12 @@ export default function Main() {
                           <span></span>
                           <span></span>Download CV
                         </a>
-                        <a href={cvFile} className=' ml-6 lg:py-4 lg:px-6 py-3 px-4'>
+                        <button className=' ml-6 lg:py-4 lg:px-6 py-3 px-4'>
                           <span></span>
                           <span></span>
                           <span></span>
                           <span></span>Send Message
-                        </a>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -97,7 +97,7 @@ export default function Main() {
             </div>
             <div className='skill py-16 px-4 min-h-[55vh] bg-slate-100'>
               <div className='container mx-auto text-center'>
-                <h2 className='text-4xl font-semibold py-4'>Skill</h2>
+                <h2 className='text-4xl font-semibold py-4 text-blue'>Skill</h2>
                 <p>HTML, CSS, Java Script, Tailwind CSS, Bootstrap, React JS</p>
                 <div className='mt-10'>
                   <div className='grid grid-cols-2 md:gap-4 gap-2'>
@@ -156,7 +156,7 @@ export default function Main() {
             </div>
             <div className='ability-to-work py-16 px-4 min-h-[100vh]'>
               <div className='container mx-auto text-left'>
-                <h2 className='text-4xl font-semibold py-4 text-center'>Ability to work</h2>
+                <h2 className='text-4xl mb-4 font-semibold py-4 text-center text-blue'>Ability to work</h2>
                 <div className='grid grid-cols-12 gap-4'>
                   <div className='lg:col-span-4 col-span-12'>
                     <h3 className='text-lg font-bold'>HTML / CSS and Tailwind CSS / Bootstrap</h3>
@@ -220,13 +220,13 @@ export default function Main() {
             </div>
             <div className='my-project py-16 px-4 min-h-[100vh] bg-slate-100'>
               <div className='container mx-auto text-center'>
-                <h2 className='text-4xl font-semibold py-4'>My Project</h2>
+                <h2 className='text-4xl font-semibold py-4 text-blue'>My Project</h2>
               </div>
             </div>
             <div className='contact py-16 px-4 min-h-[100vh]'>
               <div className='container mx-auto text-center'>
                 <div className='my-4'>
-                  <h2 className='text-4xl font-semibold py-4'>Contact</h2>
+                  <h2 className='text-4xl font-semibold py-4 text-blue'>Contact</h2>
                   <p>I believe I can take the job in your company, let's contact me!</p>
                 </div>
                 <div className='grid grid-cols-3 '>
