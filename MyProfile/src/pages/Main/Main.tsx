@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import '../../sass/index.scss'
-import avatar from '../../assets/images/avatar-main.jpg'
+import avatar from 'src/assets/images/avatar-main.jpg'
 import avatarAbout from '../../assets/images/avatar.jpg'
 import cvFile from '../../assets/files/CV-Frontend-ReactJs-NguyenThiThuUyen (2).pdf'
 import { Link } from 'react-scroll'
@@ -10,6 +10,7 @@ import FormContact from '../../components/FormContact'
 export default function Main() {
   const [open, setOpen] = useState(false)
   const [isPopupVisible, setIsPopupVisible] = useState(false)
+
   const handleShowPopup = () => {
     setOpen(true)
     setIsPopupVisible(true)
@@ -30,7 +31,7 @@ export default function Main() {
         <div className='grid grid-cols-12'>
           <div className='lg:col-span-3 lg:block hidden h-[100vh] w-full bg-white'></div>
           <div className='lg:col-span-9 col-span-12'>
-            <div className='home flex bg-blue items-center justify-center min-h-[100vh] w-full'>
+            <div id='home' className='home flex bg-blue items-center justify-center min-h-[100vh] w-full'>
               <div className='container text-white px-8 text-center'>
                 <div className='avatar text-center inline-block w-[200px] h-[200px] rounded-full bg-white overflow-hidden animation-left'>
                   <img src={avatar} alt='avatar' className='object-cover' />
@@ -40,7 +41,7 @@ export default function Main() {
                 <h4 className='animation-left'>HTML, CSS, Java Script, React JS, Node JS</h4>
               </div>
             </div>
-            <div className='about px-4 py-16 min-h-[100vh]'>
+            <div id='about' className='about px-4 py-16 min-h-[100vh]'>
               <div className='container mx-auto text-center '>
                 <h2 className='text-4xl font-semibold py-8 text-blue'>About</h2>
                 <div className='flex'>
@@ -78,24 +79,16 @@ export default function Main() {
                           className='lg:py-4 lg:px-6 py-3 px-4'
                           download='CV-FrontEnd-Nguyen-Thi-Thu-Uyen'
                         >
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                          <span></span>Download CV
+                          Download CV
                         </a>
-                        <button className=' ml-6 lg:py-4 lg:px-6 py-3 px-4'>
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                          <span></span>Send Message
-                        </button>
+                        <button className=' ml-6 lg:py-4 lg:px-6 py-3 px-4'>Send Message</button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className='skill py-16 px-4 min-h-[55vh] bg-slate-100'>
+            <div id='skill' className='skill py-16 px-4 min-h-[55vh] bg-slate-100'>
               <div className='container mx-auto text-center'>
                 <h2 className='text-4xl font-semibold py-4 text-blue'>Skill</h2>
                 <p>HTML, CSS, Java Script, Tailwind CSS, Bootstrap, React JS</p>
@@ -154,7 +147,7 @@ export default function Main() {
                 </div>
               </div>
             </div>
-            <div className='ability-to-work py-16 px-4 min-h-[100vh]'>
+            <div id='ability-to-work' className='ability-to-work py-16 px-4 min-h-[100vh]'>
               <div className='container mx-auto text-left'>
                 <h2 className='text-4xl mb-4 font-semibold py-4 text-center text-blue'>Ability to work</h2>
                 <div className='grid grid-cols-12 gap-4'>
@@ -218,12 +211,12 @@ export default function Main() {
                 </div>
               </div>
             </div>
-            <div className='my-project py-16 px-4 min-h-[100vh] bg-slate-100'>
+            <div id='project' className='my-project py-16 px-4 min-h-[100vh] bg-slate-100'>
               <div className='container mx-auto text-center'>
                 <h2 className='text-4xl font-semibold py-4 text-blue'>My Project</h2>
               </div>
             </div>
-            <div className='contact py-16 px-4 min-h-[100vh]'>
+            <div id='contact' className='contact py-16 px-4 min-h-[100vh]'>
               <div className='container mx-auto text-center'>
                 <div className='my-4'>
                   <h2 className='text-4xl font-semibold py-4 text-blue'>Contact</h2>
@@ -320,7 +313,7 @@ export default function Main() {
                 </div>
               </div>
             </div>
-            <div className='footer py-16 px-4 bg-blue'>
+            <div id='footer' className='footer py-16 px-4 bg-blue'>
               <div className='container mx-auto text-center'>
                 <div className='my-8'>
                   <div className='py-4'>
@@ -372,10 +365,90 @@ export default function Main() {
       <div
         className={`fixed lg:block hidden lg:w-[25%] top-0 left-0 h-[100vh] z-[10] bg-zinc-900 text-white animation-left__side--nav`}
       >
-        <div className='flex justify-center w-full h-full items-center'>
-          <div className='flex'>
-            <span>VI</span>
-            <span>EN</span>
+        <div className='flex ml-4 pl-10 w-full h-full items-center'>
+          <div>
+            <div className='flex'>
+              <button className='mr-2 bg-white font-bold text-blue duration-300 transition-all rounded-md hover:text-white hover:bg-blue px-4 py-1'>
+                VI
+              </button>
+              <button className='ml-2 duration-300 font-bold transition-all rounded-md bg-slate-100 text-black hover:bg-slate-700 hover:text-white px-4 py-1'>
+                ENG
+              </button>
+            </div>
+            <ul className='mt-10'>
+              <li className=''>
+                <Link
+                  className='px-6 py-1 cursor-pointer'
+                  activeClass='active'
+                  to='home'
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  Home
+                </Link>
+              </li>
+              <li className=''>
+                <Link
+                  className='px-6 py-1 cursor-pointer'
+                  activeClass='active'
+                  to='about'
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  About
+                </Link>
+              </li>
+              <li className=''>
+                <Link
+                  className='px-6 py-1 cursor-pointer'
+                  activeClass='active'
+                  to='skill'
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  Skill
+                </Link>
+              </li>
+              <li className=''>
+                <Link
+                  className='px-6 py-1 cursor-pointer'
+                  activeClass='active'
+                  to='ability-to-work'
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  Ability to work
+                </Link>
+              </li>
+              <li className=''>
+                <Link
+                  className='px-6 py-1 cursor-pointer'
+                  activeClass='active'
+                  to='project'
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  My Project
+                </Link>
+              </li>
+              <li className=''>
+                <Link
+                  className='px-6 py-1 cursor-pointer'
+                  activeClass='active'
+                  to='contact'
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
