@@ -1,4 +1,5 @@
 import { createPortal } from 'react-dom'
+import Li from '../Li'
 
 type Props = {
   isPopupVisible: boolean
@@ -17,7 +18,28 @@ export default function PopupHeader({ isPopupVisible, setIsPopupVisible, handleO
         <div
           className={`fixed top-0 left-0 h-[100vh] w-[300px] bg-zinc-900 transition-all duration-300
     ${isPopupVisible ? 'visible' : 'invisible translate-x-[-100%]'}  `}
-        ></div>
+        >
+          <div className='flex ml-4 pl-10 w-full h-full items-center'>
+            <div>
+              <div className='flex'>
+                <button className='mr-2 bg-white font-bold text-blue duration-300 transition-all rounded-md hover:text-white hover:bg-blue px-4 py-1'>
+                  VI
+                </button>
+                <button className='ml-2 duration-300 font-bold transition-all rounded-md bg-slate-100 text-black hover:bg-slate-700 hover:text-white px-4 py-1'>
+                  ENG
+                </button>
+              </div>
+              <ul className='mt-10'>
+                <Li scrollTo='home' title='Home' />
+                <Li scrollTo='about' title='About' />
+                <Li scrollTo='skill' title='Skill' />
+                <Li scrollTo='ability-to-work' title='Ability to work' />
+                <Li scrollTo='project' title='My project' />
+                <Li scrollTo='contact' title='Contact' />
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </>,
     document.body
