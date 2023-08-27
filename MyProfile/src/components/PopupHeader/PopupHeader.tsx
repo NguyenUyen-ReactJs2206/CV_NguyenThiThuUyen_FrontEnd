@@ -4,9 +4,14 @@ import Li from '../Li'
 type Props = {
   isPopupVisible: boolean
   setIsPopupVisible: React.Dispatch<React.SetStateAction<boolean>>
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>
   handleOverlayClick: (event: any) => void
 }
-export default function PopupHeader({ isPopupVisible, setIsPopupVisible, handleOverlayClick }: Props) {
+export default function PopupHeader({ isPopupVisible, setIsPopupVisible, setOpen, handleOverlayClick }: Props) {
+  const closeMenu = () => {
+    setIsPopupVisible(false)
+    setOpen(false)
+  }
   return createPortal(
     <>
       <div
@@ -30,12 +35,12 @@ export default function PopupHeader({ isPopupVisible, setIsPopupVisible, handleO
                 </button>
               </div>
               <ul className='mt-10'>
-                <Li scrollTo='home' title='Home' />
-                <Li scrollTo='about' title='About' />
-                <Li scrollTo='skill' title='Skill' />
-                <Li scrollTo='ability-to-work' title='Ability to work' />
-                <Li scrollTo='project' title='My project' />
-                <Li scrollTo='contact' title='Contact' />
+                <Li scrollTo='home' title='Home' closeMenu={closeMenu} />
+                <Li scrollTo='about' title='About' closeMenu={closeMenu} />
+                <Li scrollTo='skill' title='Skill' closeMenu={closeMenu} />
+                <Li scrollTo='ability-to-work' title='Ability to work' closeMenu={closeMenu} />
+                <Li scrollTo='project' title='My project' closeMenu={closeMenu} />
+                <Li scrollTo='contact' title='Contact' closeMenu={closeMenu} />
               </ul>
             </div>
           </div>

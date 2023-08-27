@@ -3,8 +3,9 @@ import { Link } from 'react-scroll'
 type Props = {
   scrollTo: string
   title: string
+  closeMenu: () => void
 }
-export default function Li({ scrollTo, title }: Props) {
+export default function Li({ scrollTo, title, closeMenu }: Props) {
   return (
     <>
       <li className='text-white'>
@@ -15,6 +16,7 @@ export default function Li({ scrollTo, title }: Props) {
           spy={true}
           smooth={true}
           duration={500}
+          onClick={closeMenu}
         >
           {title}
         </Link>

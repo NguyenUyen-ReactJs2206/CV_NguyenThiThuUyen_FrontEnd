@@ -132,6 +132,7 @@ export default function Main() {
       <PopupHeader
         isPopupVisible={isPopupVisible}
         setIsPopupVisible={setIsPopupVisible}
+        setOpen={setOpen}
         handleOverlayClick={handleOverlayClick}
       />
     </div>
