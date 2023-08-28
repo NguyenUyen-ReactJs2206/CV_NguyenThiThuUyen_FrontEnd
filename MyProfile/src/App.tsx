@@ -4,6 +4,7 @@ import Main from './pages/Main'
 import ProjectDetail from './pages/ProjectDetail'
 import { projectDetailApi } from './api/projectDetail.api'
 import { useEffect } from 'react'
+import MainLayout from './pages/MainLayout'
 
 function App() {
   const location = useLocation()
@@ -20,7 +21,9 @@ function App() {
       <ScrollToTop />
       <div className='my-profile'>
         <Routes>
-          <Route path='/' element={<Main />} />
+          <Route path='/' element={<MainLayout />}>
+            <Route element={<Main />} />
+          </Route>
           <Route path={projectDetailApi.shopee.path} element={<ProjectDetail />} />
           <Route path={projectDetailApi.event.path} element={<ProjectDetail />} />
           <Route path={projectDetailApi.article.path} element={<ProjectDetail />} />

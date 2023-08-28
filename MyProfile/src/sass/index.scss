@@ -55,3 +55,21 @@
   color: aqua;
   border-left: 1px solid #34ffea;
 }
+
+/***********CSSTransition*****/
+.page-enter {
+  opacity: 0;
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1000ms;
+}
+.page-exit {
+  opacity: 1;
+}
+.page-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 1000ms;
+}

@@ -1,10 +1,6 @@
 import { useState } from 'react'
 import 'src/sass/index.scss'
-
-import { Link } from 'react-scroll'
 import PopupHeader from 'src/components/PopupHeader'
-import Li from 'src/components/Li'
-import Footer from 'src/components/Footer/Footer'
 import Contact from 'src/components/Contact'
 import Hero from 'src/components/Hero'
 import About from 'src/components/About'
@@ -32,15 +28,13 @@ export default function Main() {
   }
   return (
     <div className='my-profile'>
-      <div id='top'>
-        <Hero />
-        <About />
-        <Skill />
-        <AbilityToWork />
-        <MyProject />
-        <Contact />
-        <Footer />
-      </div>
+      <Hero />
+      <About />
+      <Skill />
+      <AbilityToWork />
+      <MyProject />
+      <Contact />
+
       {/* <div
         className={`fixed lg:block hidden lg:w-[25%] top-0 left-0 h-[100vh] z-[10] bg-zinc-900 text-white animation-left__side--nav`}
       >
@@ -65,7 +59,7 @@ export default function Main() {
           </div>
         </div>
       </div> */}
-      <Link
+      {/* <Link
         className='fixed bottom-[10%] justify-center items-center right-2 z-[999] flex h-20 w-20'
         activeClass='active'
         to='top'
@@ -86,7 +80,7 @@ export default function Main() {
             <path strokeLinecap='round' strokeLinejoin='round' d='M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5' />
           </svg>
         </button>
-      </Link>
+      </Link> */}
 
       {!open && (
         <button
