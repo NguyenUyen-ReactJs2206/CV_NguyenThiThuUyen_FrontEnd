@@ -38,6 +38,17 @@
   }
 }
 
+@keyframes moveInBottomForNaBar {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animation-right {
   animation: moveInRight 1s ease-out;
 }
@@ -49,11 +60,15 @@
 .animation-left__side--nav {
   animation: moveInLeftForSideNav 1s ease-out;
 }
+
+.animation-bottom__navbar {
+  animation: moveInBottomForNaBar 1s ease-out;
+}
+
 /************************/
 
 .active {
   color: aqua;
-  border-left: 1px solid #34ffea;
 }
 
 /***********CSSTransition*****/

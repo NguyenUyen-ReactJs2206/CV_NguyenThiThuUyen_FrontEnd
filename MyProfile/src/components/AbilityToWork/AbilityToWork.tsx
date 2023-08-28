@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function AbilityToWork() {
   return (
-    <div id='ability-to-work' className='ability-to-work py-16 px-4 min-h-[100vh]'>
+    <div id='ability-to-work' className='py-16 px-4 min-h-[100vh]'>
       <div className='container mx-auto text-left'>
         <h2 className='text-4xl mb-4 font-semibold py-4 text-center text-blue'>Ability to work</h2>
         <div className='grid grid-cols-12 gap-4'>

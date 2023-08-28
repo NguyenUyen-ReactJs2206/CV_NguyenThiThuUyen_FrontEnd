@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group'
 import 'src/sass/index.scss'
 import Loading from 'src/components/Loading'
 import Footer from 'src/components/Footer/Footer'
-import Hero from 'src/components/Hero'
+import Main from '../Main/Main'
 
 interface Props {
   children?: React.ReactNode
@@ -32,10 +32,9 @@ export default function MainLayout({ children }: Props) {
       )}
 
       <CSSTransition in={!loading} timeout={1000} nodeRef={nodeRef} classNames='page' unmountOnExit>
-        <div ref={nodeRef}>
+        <div ref={nodeRef} id='top'>
           <NavHeader />
-          {children}
-          <Hero />
+          <Main />
           <Footer />
           <Link
             className='fixed bottom-[10%] right-2 z-[999] flex h-12 w-12'

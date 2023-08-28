@@ -3,7 +3,7 @@ import avatar from 'src/assets/images/avatar-main.jpg'
 
 export default function Hero() {
   return (
-    <div id='home' className='home flex bg-blue items-center justify-center min-h-[100vh] w-full'>
+    <div id='home' className='flex bg-blue items-center justify-center min-h-[100vh] w-full'>
       <div className='container text-white px-8 text-center'>
         <div className='avatar text-center inline-block w-[200px] h-[200px] rounded-full bg-white overflow-hidden animation-left'>
           <img src={avatar} alt='avatar' className='object-cover' />

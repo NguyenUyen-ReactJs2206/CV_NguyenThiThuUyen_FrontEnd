@@ -10,12 +10,13 @@ export default function Li({ scrollTo, title, closeMenu }: Props) {
     <>
       <li className='text-white'>
         <Link
-          className='px-6 py-1 cursor-pointer'
+          className='py-1 cursor-pointer'
           activeClass='active'
           to={scrollTo}
           spy={true}
           smooth={true}
-          duration={500}
+          duration={1000}
+          offset={-100}
           onClick={closeMenu}
         >
           {title}

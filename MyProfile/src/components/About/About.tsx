@@ -3,7 +3,7 @@ import cvFile from 'src/assets/files/CV-Frontend-ReactJs-NguyenThiThuUyen (2).pd
 
 export default function About() {
   return (
-    <div id='about' className='about min-h-[100vh]'>
+    <div id='about' className='min-h-[100vh]'>
       <div className='container px-4 py-16 mx-auto text-center '>
         <h2 className='text-4xl font-semibold py-8 text-blue'>About</h2>
         <div className='flex'>

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Skill() {
   return (
-    <div id='skill' className='skill py-16 px-4 min-h-[100vh] bg-slate-100'>
+    <div id='skill' className='py-16 px-4 min-h-[100vh] bg-slate-100'>
       <div className='container mx-auto text-center'>
         <h2 className='text-4xl font-semibold py-4 text-blue'>Skill</h2>
         <p>HTML, CSS, Java Script, Tailwind CSS, Bootstrap, React JS</p>
