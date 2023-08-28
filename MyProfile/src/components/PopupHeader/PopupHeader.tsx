@@ -35,12 +35,12 @@ export default function PopupHeader({ isPopupVisible, setIsPopupVisible, setOpen
                 </button>
               </div>
               <ul className='mt-10'>
-                <Li scrollTo='home' title='Home' closeMenu={closeMenu} />
-                <Li scrollTo='about' title='About' closeMenu={closeMenu} />
-                <Li scrollTo='skill' title='Skill' closeMenu={closeMenu} />
-                <Li scrollTo='ability-to-work' title='Ability to work' closeMenu={closeMenu} />
-                <Li scrollTo='project' title='My project' closeMenu={closeMenu} />
-                <Li scrollTo='contact' title='Contact' closeMenu={closeMenu} />
+                <Li scrollTo='home' title='Home' closeMenu={closeMenu} className='text-white' />
+                <Li scrollTo='about' title='About' closeMenu={closeMenu} className='text-white' />
+                <Li scrollTo='skill' title='Skill' closeMenu={closeMenu} className='text-white' />
+                <Li scrollTo='ability-to-work' title='Ability to work' closeMenu={closeMenu} className='text-white' />
+                <Li scrollTo='project' title='My project' closeMenu={closeMenu} className='text-white' />
+                <Li scrollTo='contact' title='Contact' closeMenu={closeMenu} className='text-white' />
               </ul>
             </div>
           </div>
