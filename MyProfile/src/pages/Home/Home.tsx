@@ -8,7 +8,7 @@ import Skill from 'src/components/Skill'
 import AbilityToWork from 'src/components/AbilityToWork'
 import MyProject from 'src/components/MyProject'
 
-export default function Main() {
+export default function Home() {
   const [open, setOpen] = useState(false)
   const [isPopupVisible, setIsPopupVisible] = useState(false)
 
