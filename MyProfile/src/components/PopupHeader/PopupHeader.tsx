@@ -17,7 +17,7 @@ export default function PopupHeader({ isPopupVisible, setIsPopupVisible, setOpen
       <div
         onClick={handleOverlayClick}
         className={` ${isPopupVisible ? 'visible' : 'invisible'} 
-   fixed inset-0 z-[9] h-[100vh] w-full bg-zinc-900/30
+   fixed inset-0 z-[9] h-[100vh] w-full bg-zinc-900/30 lg:hidden
    `}
       >
         <div
@@ -35,12 +35,22 @@ export default function PopupHeader({ isPopupVisible, setIsPopupVisible, setOpen
                 </button>
               </div>
               <ul className='mt-10'>
-                <Li scrollTo='home' title='Home' closeMenu={closeMenu} className='text-white' />
-                <Li scrollTo='about' title='About' closeMenu={closeMenu} className='text-white' />
-                <Li scrollTo='skill' title='Skill' closeMenu={closeMenu} className='text-white' />
-                <Li scrollTo='ability-to-work' title='Ability to work' closeMenu={closeMenu} className='text-white' />
-                <Li scrollTo='project' title='My project' closeMenu={closeMenu} className='text-white' />
-                <Li scrollTo='contact' title='Contact' closeMenu={closeMenu} className='text-white' />
+                <Li scrollTo='home' title='Home' closeMenu={closeMenu} className='text-white hover:text-blue ' />
+                <Li scrollTo='about' title='About' closeMenu={closeMenu} className='text-white hover:text-blue' />
+                <Li scrollTo='skill' title='Skill' closeMenu={closeMenu} className='text-white hover:text-blue' />
+                <Li
+                  scrollTo='ability-to-work'
+                  title='Ability to work'
+                  closeMenu={closeMenu}
+                  className='text-white hover:text-blue'
+                />
+                <Li
+                  scrollTo='project'
+                  title='My project'
+                  closeMenu={closeMenu}
+                  className='text-white hover:text-blue'
+                />
+                <Li scrollTo='contact' title='Contact' closeMenu={closeMenu} className='text-white hover:text-blue' />
               </ul>
             </div>
           </div>

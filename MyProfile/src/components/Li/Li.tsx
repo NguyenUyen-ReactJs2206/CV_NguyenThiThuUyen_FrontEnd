@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import { Link } from 'react-scroll'
 
 type Props = {
@@ -16,7 +17,7 @@ export default function Li({ scrollTo, title, closeMenu, className }: Props) {
           spy={true}
           smooth={true}
           duration={1000}
-          offset={-100}
+          offset={-20}
           onClick={closeMenu}
         >
           {title}

@@ -1,10 +1,11 @@
 import avatarAbout from 'src/assets/images/avatar.jpg'
 import cvFile from 'src/assets/files/CV-Frontend-ReactJs-NguyenThiThuUyen (2).pdf'
+import { Link } from 'react-scroll'
 
 export default function About() {
   return (
     <div id='about' className='min-h-[100vh]'>
-      <div className='container px-4 py-16 mx-auto text-center '>
+      <div className='container lg:px-8 sm:px-6 px-4 py-16 mx-auto text-center '>
         <h2 className='text-4xl font-semibold py-8 text-blue'>About</h2>
         <div className='flex'>
           <img
@@ -36,10 +37,27 @@ export default function About() {
             </div>
             <div className='py-4'>
               <div className='flex'>
-                <a href={cvFile} className='lg:py-4 lg:px-6 py-3 px-4' download='CV-FrontEnd-Nguyen-Thi-Thu-Uyen'>
+                <a
+                  href={cvFile}
+                  className='border hover:shadow-xl rounded-md p-2 lg:p-4 cursor-pointer 
+                  bg-blue/60 text-white hover:bg-blue
+                  font-semibold lg:font-bold transition-all duration-300'
+                  download='CV-FrontEnd-Nguyen-Thi-Thu-Uyen'
+                >
                   Download CV
                 </a>
-                <button className=' ml-6 lg:py-4 lg:px-6 py-3 px-4'>Send Message</button>
+                <Link
+                  to='contact'
+                  spy={true}
+                  smooth={true}
+                  duration={1000}
+                  offset={-20}
+                  className='border hover:shadow-md rounded-md ml-6 p-2 lg:p-4 cursor-pointer 
+                  bg-slate-500 text-white hover:bg-slate-800
+                  font-semibold lg:font-bold transition-all duration-300'
+                >
+                  Send Message
+                </Link>
               </div>
             </div>
           </div>
