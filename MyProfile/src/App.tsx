@@ -5,8 +5,6 @@ import ProjectDetail from './pages/ProjectDetail'
 import { projectDetailApi } from './api/projectDetail.api'
 import { useEffect } from 'react'
 import MainLayout from './pages/MainLayout'
-import NavHeader from './components/NavHeader'
-import Footer from './components/Footer/Footer'
 
 function App() {
   const location = useLocation()

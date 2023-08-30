@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { Link } from 'react-scroll'
+import { useTranslation } from 'react-i18next'
 
 type Props = {
   scrollTo: string
@@ -8,6 +9,7 @@ type Props = {
   className: string
 }
 export default function Li({ scrollTo, title, closeMenu, className }: Props) {
+  const { i18n, t } = useTranslation('navbar')
   return (
     <>
       <li className={className}>
