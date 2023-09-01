@@ -9,7 +9,7 @@ type Props = {
   className: string
 }
 export default function Li({ scrollTo, title, closeMenu, className }: Props) {
-  const { i18n, t } = useTranslation('navbar')
+  const { t } = useTranslation('navbar')
   return (
     <>
       <li className={className}>
@@ -22,7 +22,7 @@ export default function Li({ scrollTo, title, closeMenu, className }: Props) {
           offset={-20}
           onClick={closeMenu}
         >
-          {title}
+          {t(`${title}`)}
         </Link>
       </li>
     </>
