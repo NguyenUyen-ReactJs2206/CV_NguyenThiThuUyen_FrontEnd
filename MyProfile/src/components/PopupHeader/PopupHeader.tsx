@@ -1,6 +1,8 @@
 import { createPortal } from 'react-dom'
 import Li from '../Li'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-scroll'
+import { useState } from 'react'
 
 type Props = {
   isPopupVisible: boolean
@@ -10,9 +12,11 @@ type Props = {
 }
 export default function PopupHeader({ isPopupVisible, setIsPopupVisible, setOpen, handleOverlayClick }: Props) {
   const { i18n } = useTranslation('navbar')
+  const [language, setLanguage] = useState('en')
 
   const handleLanguageChange = (lng: 'vi' | 'en') => {
     i18n.changeLanguage(lng)
+    setLanguage(lng)
   }
   const closeMenu = () => {
     setIsPopupVisible(false)
@@ -35,13 +39,17 @@ export default function PopupHeader({ isPopupVisible, setIsPopupVisible, setOpen
               <div className='flex'>
                 <button
                   onClick={() => handleLanguageChange('vi')}
-                  className='mr-2 bg-white font-bold text-blue duration-300 transition-all rounded-md hover:text-white hover:bg-blue px-4 py-1'
+                  className={`${
+                    language === 'vi' ? 'bg-blue text-white' : 'bg-white text-blue'
+                  } mr-2  duration-300 transition-all rounded-md hover:text-white font-bold hover:bg-blue px-4 py-1`}
                 >
                   VI
                 </button>
                 <button
                   onClick={() => handleLanguageChange('en')}
-                  className='ml-2 duration-300 font-bold transition-all rounded-md bg-slate-100 text-black hover:bg-slate-700 hover:text-white px-4 py-1'
+                  className={`${
+                    language === 'en' ? 'bg-slate-700 text-white' : ''
+                  } ml-2 duration-300 font-bold transition-all rounded-md bg-slate-100 text-black hover:bg-slate-700 hover:text-white px-4 py-1`}
                 >
                   ENG
                 </button>
@@ -51,11 +59,12 @@ export default function PopupHeader({ isPopupVisible, setIsPopupVisible, setOpen
                 <Li scrollTo='about' title='about' closeMenu={closeMenu} className='text-white hover:text-blue' />
                 <Li scrollTo='skill' title='skill' closeMenu={closeMenu} className='text-white hover:text-blue' />
                 <Li
-                  scrollTo='ability'
+                  scrollTo='ability-to-work'
                   title='ability to work'
                   closeMenu={closeMenu}
                   className='text-white hover:text-blue'
                 />
+
                 <Li scrollTo='project' title='project' closeMenu={closeMenu} className='text-white hover:text-blue' />
                 <Li scrollTo='contact' title='contact' closeMenu={closeMenu} className='text-white hover:text-blue' />
               </ul>

@@ -1,11 +1,14 @@
+import { useState } from 'react'
 import Li from '../Li'
 import { useTranslation } from 'react-i18next'
 
 export default function NavHeader() {
   const { i18n } = useTranslation('navbar')
+  const [language, setLanguage] = useState('en')
 
   const handleLanguageChange = (lng: 'vi' | 'en') => {
     i18n.changeLanguage(lng)
+    setLanguage(lng)
   }
   return (
     <div className='lg:block hidden bg-blue fixed w-full z-20'>
@@ -44,14 +47,16 @@ export default function NavHeader() {
 
           <button
             onClick={() => handleLanguageChange('vi')}
-            className='ml-8 p-2 uppercase text-sm cursor-pointer border-r-2 border-r-blue/40 hover:text-blue'
+            className={`${
+              language === 'vi' ? 'text-blue' : ''
+            } ml-8 p-2 uppercase text-sm cursor-pointer border-r-2 border-r-blue/40 hover:text-blue`}
           >
             VI
           </button>
 
           <button
             onClick={() => handleLanguageChange('en')}
-            className=' p-2 uppercase text-sm cursor-pointer hover:text-blue'
+            className={`${language === 'en' ? 'text-blue' : ''} p-2 uppercase text-sm cursor-pointer hover:text-blue`}
           >
             EN
           </button>
