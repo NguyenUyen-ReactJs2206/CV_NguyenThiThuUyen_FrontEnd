@@ -22,9 +22,9 @@ function App() {
       <div className='my-profile'>
         <Routes>
           <Route path='/' element={<MainLayout />} />
-          <Route path={projectDetailApi.shopee.path} element={<ProjectDetail />} />
-          <Route path={projectDetailApi.event.path} element={<ProjectDetail />} />
-          <Route path={projectDetailApi.article.path} element={<ProjectDetail />} />
+          <Route path={projectDetailApi.shopee.path} element={<ProjectDetail content={'shopeeeee'} />} />
+          <Route path={projectDetailApi.event.path} element={<ProjectDetail content={'Event'} />} />
+          <Route path={projectDetailApi.article.path} element={<ProjectDetail content={'Article'} />} />
         </Routes>
       </div>
     </>

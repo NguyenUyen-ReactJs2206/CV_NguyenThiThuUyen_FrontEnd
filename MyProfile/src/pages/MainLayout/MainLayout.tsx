@@ -28,7 +28,7 @@ export default function MainLayout({ children }: Props) {
     <div>
       {loading && (
         <CSSTransition in={loading} timeout={500} nodeRef={nodeRef} classNames='loading' unmountOnExit>
-          <Loading />
+          <Loading title={'Thank you for viewing my cv'} />
         </CSSTransition>
       )}
 

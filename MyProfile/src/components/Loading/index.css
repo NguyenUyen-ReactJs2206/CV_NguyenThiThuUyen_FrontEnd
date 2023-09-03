@@ -6,6 +6,12 @@
     transform: rotate(360deg);
   }
 }
+.text-shadow {
+  text-shadow:
+    2px 2px 2px white,
+    2px 2px 30px #0073b5,
+    0 0 5px #5d9dc2;
+}
 .spinner {
   position: fixed;
   top: 0;
