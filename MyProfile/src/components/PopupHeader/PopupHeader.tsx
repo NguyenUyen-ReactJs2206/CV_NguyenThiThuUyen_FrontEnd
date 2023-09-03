@@ -1,7 +1,6 @@
 import { createPortal } from 'react-dom'
 import Li from '../Li'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-scroll'
 import { useState } from 'react'
 
 type Props = {
@@ -26,8 +25,9 @@ export default function PopupHeader({ isPopupVisible, setIsPopupVisible, setOpen
     <>
       <div
         onClick={handleOverlayClick}
-        className={` ${isPopupVisible ? 'visible' : 'invisible'} 
-   fixed inset-0 z-[9] h-[100vh] w-full bg-zinc-900/30 lg:hidden
+        className={` ${isPopupVisible ? 'visible opacity-100' : 'invisible opacity-0'} 
+   fixed inset-0 z-[9] h-[100vh] w-full bg-zinc-900/70 lg:hidden
+   transition-all duration-700
    `}
       >
         <div

@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom'
 import { Link } from 'react-scroll'
 import { useTranslation } from 'react-i18next'
 
@@ -18,7 +17,7 @@ export default function Li({ scrollTo, title, closeMenu, className }: Props) {
           to={scrollTo}
           spy={true}
           smooth={true}
-          duration={1000}
+          duration={500}
           offset={-20}
           onClick={closeMenu}
         >
