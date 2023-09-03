@@ -1,14 +1,22 @@
-import { useState } from 'react'
+import { Dispatch, SetStateAction, useState } from 'react'
 import Li from '../Li'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-scroll'
 
-export default function NavHeader() {
+type Props = {
+  setLoading: Dispatch<SetStateAction<boolean>>
+}
+export default function NavHeader({ setLoading }: Props) {
   const { i18n } = useTranslation('navbar')
   const [language, setLanguage] = useState('en')
 
   const handleLanguageChange = (lng: 'vi' | 'en') => {
     i18n.changeLanguage(lng)
     setLanguage(lng)
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1000)
   }
   return (
     <div className='lg:block hidden bg-blue fixed w-full z-20'>
@@ -50,21 +58,27 @@ export default function NavHeader() {
             className='px-4 py-2 uppercase text-sm hover:underline-effect underline-effect duration-1000 hover:text-blue'
           />
 
-          <button
+          <Link
+            to='top'
+            spy={true}
+            smooth={true}
+            duration={500}
             onClick={() => handleLanguageChange('vi')}
-            className={`${
-              language === 'vi' ? 'text-blue' : ''
-            } ml-8 p-2 uppercase text-sm cursor-pointer border-r-2 border-r-blue/40 hover:text-blue`}
+            className={`ml-8 p-2 uppercase text-sm cursor-pointer border-r-2 border-r-blue/40 hover:text-blue`}
           >
-            VI
-          </button>
+            <div className={`${language === 'vi' ? 'text-red-400' : ''}`}>VI</div>
+          </Link>
 
-          <button
+          <Link
+            to='top'
+            spy={true}
+            smooth={true}
+            duration={500}
             onClick={() => handleLanguageChange('en')}
-            className={`${language === 'en' ? 'text-blue' : ''} p-2 uppercase text-sm cursor-pointer hover:text-blue`}
+            className={` p-2 uppercase text-sm cursor-pointer hover:text-blue`}
           >
-            EN
-          </button>
+            <div className={`${language === 'en' ? 'text-red-400' : ''}`}>EN</div>
+          </Link>
         </ul>
       </div>
     </div>

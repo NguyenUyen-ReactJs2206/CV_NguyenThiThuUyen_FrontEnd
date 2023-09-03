@@ -6,7 +6,6 @@ import 'src/sass/index.scss'
 import Loading from 'src/components/Loading'
 import Footer from 'src/components/Footer/Footer'
 import Home from '../Home/Home'
-import { useTranslation } from 'react-i18next'
 
 interface Props {
   children?: React.ReactNode
@@ -34,7 +33,7 @@ export default function MainLayout({ children }: Props) {
 
       <CSSTransition in={!loading} timeout={1000} nodeRef={nodeRef} classNames='page' unmountOnExit>
         <div ref={nodeRef} id='top'>
-          <NavHeader />
+          <NavHeader setLoading={setLoading} />
           <Home />
           <Footer />
           <Link

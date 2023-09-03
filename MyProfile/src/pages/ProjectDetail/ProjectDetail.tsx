@@ -3,7 +3,6 @@ import { CSSTransition } from 'react-transition-group'
 import Loading from 'src/components/Loading'
 type Props = {
   content: string
-  title: string
 }
 export default function ProjectDetail({ content }: Props) {
   const [loading, setLoading] = useState(true)
