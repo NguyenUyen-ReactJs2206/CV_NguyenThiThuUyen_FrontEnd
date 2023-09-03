@@ -1,10 +1,12 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 export default function Skill() {
+  const { t } = useTranslation('skill')
   return (
     <div id='skill' className='py-16 px-4 min-h-[90vh] bg-slate-100'>
       <div className='container mx-auto text-center'>
-        <h2 className='text-4xl font-semibold py-4 text-blue'>Skill</h2>
+        <h2 className='text-4xl font-semibold py-4 text-blue'>{t('title')}</h2>
         <p>HTML, CSS, Java Script, Tailwind CSS, Bootstrap, React JS</p>
         <div className='mt-10'>
           <div className='grid grid-cols-2 md:gap-4 gap-2'>

@@ -57,6 +57,12 @@ export default function PopupHeader({ isPopupVisible, setIsPopupVisible, setOpen
               <ul className='mt-10'>
                 <Li scrollTo='home' title='home' closeMenu={closeMenu} className='text-white hover:text-blue ' />
                 <Li scrollTo='about' title='about' closeMenu={closeMenu} className='text-white hover:text-blue' />
+                <Li
+                  scrollTo='education'
+                  title='education'
+                  closeMenu={closeMenu}
+                  className='text-white hover:text-blue'
+                />
                 <Li scrollTo='skill' title='skill' closeMenu={closeMenu} className='text-white hover:text-blue' />
                 <Li
                   scrollTo='ability-to-work'

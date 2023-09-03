@@ -1,5 +1,6 @@
 import React from 'react'
-import avatar from 'src/assets/images/avatar-main.jpg'
+// import avatar from 'src/assets/images/avatar-main.jpg'
+import avatar from 'src/assets/images/ren.png'
 
 export default function Hero() {
   return (

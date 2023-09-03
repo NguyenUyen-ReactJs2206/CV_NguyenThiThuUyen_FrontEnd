@@ -7,6 +7,7 @@ import About from 'src/components/About'
 import Skill from 'src/components/Skill'
 import AbilityToWork from 'src/components/AbilityToWork'
 import MyProject from 'src/components/MyProject'
+import Education from 'src/components/Education'
 
 export default function Home() {
   const [open, setOpen] = useState(false)
@@ -30,6 +31,7 @@ export default function Home() {
     <div className='my-profile'>
       <Hero />
       <About />
+      <Education />
       <Skill />
       <AbilityToWork />
       <MyProject />

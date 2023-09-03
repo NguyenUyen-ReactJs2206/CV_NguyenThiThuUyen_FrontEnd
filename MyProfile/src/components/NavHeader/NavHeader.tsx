@@ -25,6 +25,11 @@ export default function NavHeader() {
             className='px-4 py-2 uppercase text-sm hover:underline-effect underline-effect duration-1000 hover:text-blue  '
           />
           <Li
+            scrollTo='education'
+            title='education'
+            className='px-4 py-2 uppercase text-sm hover:underline-effect underline-effect duration-1000 hover:text-blue  '
+          />
+          <Li
             scrollTo='skill'
             title='skill'
             className='px-4 py-2 uppercase text-sm hover:underline-effect underline-effect duration-1000 hover:text-blue  '
