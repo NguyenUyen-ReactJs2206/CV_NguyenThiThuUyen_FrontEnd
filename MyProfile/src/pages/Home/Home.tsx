@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Dispatch, SetStateAction, useState } from 'react'
 import 'src/sass/index.scss'
 import PopupHeader from 'src/components/PopupHeader'
 import Contact from 'src/components/Contact'
@@ -9,7 +9,10 @@ import AbilityToWork from 'src/components/AbilityToWork'
 import MyProject from 'src/components/MyProject'
 import Education from 'src/components/Education'
 
-export default function Home() {
+type Props = {
+  setLoading: Dispatch<SetStateAction<boolean>>
+}
+export default function Home({ setLoading }: Props) {
   const [open, setOpen] = useState(false)
   const [isPopupVisible, setIsPopupVisible] = useState(false)
 
@@ -83,6 +86,7 @@ export default function Home() {
         setIsPopupVisible={setIsPopupVisible}
         setOpen={setOpen}
         handleOverlayClick={handleOverlayClick}
+        setLoading={setLoading}
       />
     </div>
   )

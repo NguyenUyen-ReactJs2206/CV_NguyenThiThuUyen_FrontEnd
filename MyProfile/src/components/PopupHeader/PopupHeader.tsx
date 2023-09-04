@@ -1,21 +1,34 @@
 import { createPortal } from 'react-dom'
 import Li from '../Li'
 import { useTranslation } from 'react-i18next'
-import { useState } from 'react'
+import { Dispatch, SetStateAction, useState } from 'react'
 
 type Props = {
   isPopupVisible: boolean
   setIsPopupVisible: React.Dispatch<React.SetStateAction<boolean>>
   setOpen: React.Dispatch<React.SetStateAction<boolean>>
   handleOverlayClick: (event: any) => void
+  setLoading: Dispatch<SetStateAction<boolean>>
 }
-export default function PopupHeader({ isPopupVisible, setIsPopupVisible, setOpen, handleOverlayClick }: Props) {
+export default function PopupHeader({
+  isPopupVisible,
+  setIsPopupVisible,
+  setOpen,
+  handleOverlayClick,
+  setLoading
+}: Props) {
   const { i18n } = useTranslation('navbar')
   const [language, setLanguage] = useState('en')
 
   const handleLanguageChange = (lng: 'vi' | 'en') => {
     i18n.changeLanguage(lng)
     setLanguage(lng)
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1000)
+    setIsPopupVisible(false)
+    setOpen(false)
   }
   const closeMenu = () => {
     setIsPopupVisible(false)
@@ -25,10 +38,9 @@ export default function PopupHeader({ isPopupVisible, setIsPopupVisible, setOpen
     <>
       <div
         onClick={handleOverlayClick}
-        className={` ${isPopupVisible ? 'visible opacity-100' : 'invisible opacity-0'} 
-   fixed inset-0 z-[9] h-[100vh] w-full bg-zinc-900/70 lg:hidden
-   transition-all duration-700
-   `}
+        className={` ${
+          isPopupVisible ? 'visible opacity-100' : 'invisible opacity-0'
+        } fixed inset-0 z-[9] h-[100vh] w-full bg-zinc-900/70 lg:hidden transition-all duration-700`}
       >
         <div
           className={`fixed top-0 left-0 h-[100vh] w-[300px] bg-zinc-900 transition-all duration-300

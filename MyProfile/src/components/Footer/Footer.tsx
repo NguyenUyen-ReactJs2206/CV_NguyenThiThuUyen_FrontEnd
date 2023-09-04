@@ -8,7 +8,8 @@ export default function Footer() {
           <div className='py-4'>
             <div className='flex items-center justify-center'>
               <a
-                href='https://www.facebook.com/profile.php?id=100024807305613'
+                // href='https://www.facebook.com/profile.php?id=100024807305613'
+                href='/'
                 target='_blank'
                 className='mr-6 flex justify-center items-center h-8 w-8  hover:fill-blue hover:bg-white duration-300 transition-all rounded-full fill-white/90'
               >

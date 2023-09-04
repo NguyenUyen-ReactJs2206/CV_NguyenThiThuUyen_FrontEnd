@@ -34,7 +34,7 @@ export default function MainLayout({ children }: Props) {
       <CSSTransition in={!loading} timeout={1000} nodeRef={nodeRef} classNames='page' unmountOnExit>
         <div ref={nodeRef} id='top'>
           <NavHeader setLoading={setLoading} />
-          <Home />
+          <Home setLoading={setLoading} />
           <Footer />
           <Link
             className='fixed bottom-[10%] right-2 z-[999] flex h-12 w-12'
