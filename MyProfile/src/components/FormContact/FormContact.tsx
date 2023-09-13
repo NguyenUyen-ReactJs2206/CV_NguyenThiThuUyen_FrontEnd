@@ -5,7 +5,7 @@ import { Schema, schema } from 'src/utils/rules'
 import emailjs from '@emailjs/browser'
 import {
   YOUR_EMAIL_SERVICE_ID,
-  // YOUR_EMAIL_TEAMPLATE_ID_SEND_CLIENT,
+  YOUR_EMAIL_TEAMPLATE_ID_SEND_CLIENT,
   YOUR_EMAIL_TEAMPLATE_ID_SEND_SERVER,
   YOUR_PUBLIC_KEY_ID
 } from 'src/helper/emailjs'
@@ -52,21 +52,21 @@ export default function FormContact() {
           console.error('Email failed to send:', error)
         }
       )
-    //   emailjs
-    //     .send(
-    //       `${YOUR_EMAIL_SERVICE_ID}`,
-    //       `${YOUR_EMAIL_TEAMPLATE_ID_SEND_CLIENT}`,
-    //       templateParams,
-    //       `${YOUR_PUBLIC_KEY_ID}`
-    //     )
-    //     .then(
-    //       (response) => {
-    //         console.log('Email sent successfully!', response.status, response.text)
-    //       },
-    //       (error) => {
-    //         console.error('Email failed to send:', error)
-    //       }
-    //     )
+    emailjs
+      .send(
+        `${YOUR_EMAIL_SERVICE_ID}`,
+        `${YOUR_EMAIL_TEAMPLATE_ID_SEND_CLIENT}`,
+        templateParams,
+        `${YOUR_PUBLIC_KEY_ID}`
+      )
+      .then(
+        (response) => {
+          console.log('Email sent successfully!', response.status, response.text)
+        },
+        (error) => {
+          console.error('Email failed to send:', error)
+        }
+      )
   }
 
   return (
@@ -83,7 +83,7 @@ export default function FormContact() {
               className='w-full border border-blue/80 px-4 py-4 text-lg outline-none focus:outline-blue'
               {...register('name')}
             />
-            <p className='min-h-[24px] text-left text-sm mt-1  text-red-500'>
+            <p className='min-h-[22px] text-left text-sm mt-1  text-red-500'>
               {errors.name ? `*${errors.name.message}` : ''}
             </p>
           </div>
@@ -95,7 +95,7 @@ export default function FormContact() {
               className='w-full border border-blue/80 px-4 py-4 text-lg outline-none focus:outline-blue'
               {...register('phone')}
             />
-            <p className='min-h-[24px] text-left text-sm mt-1  text-red-500'>
+            <p className='min-h-[22px] text-left text-sm mt-1  text-red-500'>
               {errors.phone ? `*${errors.phone.message}` : ''}
             </p>
           </div>
@@ -106,7 +106,7 @@ export default function FormContact() {
               className='w-full border border-blue/80 px-4 py-4 text-lg outline-none focus:outline-blue'
               {...register('email')}
             />
-            <p className='min-h-[24px] text-left text-sm mt-1  text-red-500'>
+            <p className='min-h-[22px] text-left text-sm mt-1  text-red-500'>
               {errors.email ? `*${errors.email.message}` : ''}
             </p>
           </div>
@@ -117,7 +117,7 @@ export default function FormContact() {
               rows={4}
               {...register('message')}
             ></textarea>
-            <p className='min-h-[24px] text-left text-sm mt-1  text-red-500'>
+            <p className='min-h-[22px] text-left text-sm  text-red-500'>
               {errors.message ? `*${errors.message.message}` : ''}
             </p>
           </div>
