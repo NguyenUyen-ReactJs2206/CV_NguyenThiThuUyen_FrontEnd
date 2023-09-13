@@ -1,1 +1,9 @@
-{}
+{
+  "title": "Contact",
+  "content": "I believe I can take the job in your company, let's contact me!",
+  "name": "Your name or Company's name",
+  "phone": "Your phone number",
+  "email": "Your email",
+  "message": "Your message",
+  "button": "Send"
+}

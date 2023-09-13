@@ -1,1 +1,9 @@
-{}
+{
+  "title": "Liên hệ",
+  "content": "Tôi tin mình có thể đảm nhận công việc ở công ty bạn, hãy liên hệ với tôi!",
+  "name": "Tên của bạn hoặc tên Công ty",
+  "phone": "Số điện thoại của bạn",
+  "email": "Email của bạn",
+  "message": "Nội dung",
+  "button": "Gửi"
+}

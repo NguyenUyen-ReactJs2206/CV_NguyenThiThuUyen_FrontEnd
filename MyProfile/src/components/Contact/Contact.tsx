@@ -1,13 +1,15 @@
 import React from 'react'
 import FormContact from '../FormContact'
+import { useTranslation } from 'react-i18next'
 
 export default function Contact() {
+  const { t } = useTranslation('contact')
   return (
     <div id='contact' className='py-16 px-4 min-h-[100vh]'>
       <div className='container mx-auto text-center'>
         <div className='my-4'>
-          <h2 className='text-4xl font-semibold py-4 text-blue'>Contact</h2>
-          <p>I believe I can take the job in your company, let's contact me!</p>
+          <h2 className='text-4xl font-semibold py-4 text-blue'>{t('title')}</h2>
+          <p>{t('content')}</p>
         </div>
         <div className='grid grid-cols-3 '>
           <div className='col-span-3 md:col-span-1'>

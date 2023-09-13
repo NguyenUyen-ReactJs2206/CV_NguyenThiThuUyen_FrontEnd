@@ -2,6 +2,7 @@ import { createPortal } from 'react-dom'
 import Li from '../Li'
 import { useTranslation } from 'react-i18next'
 import { Dispatch, SetStateAction, useState } from 'react'
+import { Link } from 'react-scroll'
 
 type Props = {
   isPopupVisible: boolean
@@ -49,22 +50,26 @@ export default function PopupHeader({
           <div className='flex ml-4 pl-10 w-full h-full items-center'>
             <div>
               <div className='flex'>
-                <button
-                  onClick={() => handleLanguageChange('vi')}
-                  className={`${
-                    language === 'vi' ? 'bg-blue text-white' : 'bg-white text-blue'
-                  } mr-2  duration-300 transition-all rounded-md hover:text-white font-bold hover:bg-blue px-4 py-1`}
-                >
-                  VI
-                </button>
-                <button
-                  onClick={() => handleLanguageChange('en')}
-                  className={`${
-                    language === 'en' ? 'bg-slate-700 text-white' : ''
-                  } ml-2 duration-300 font-bold transition-all rounded-md bg-slate-100 text-black hover:bg-slate-700 hover:text-white px-4 py-1`}
-                >
-                  ENG
-                </button>
+                <Link activeClass='active' to='top' spy={true} smooth={true} offset={0} duration={0}>
+                  <button
+                    onClick={() => handleLanguageChange('vi')}
+                    className={`${
+                      language === 'vi' ? 'bg-blue text-white' : 'bg-white text-blue'
+                    } mr-2  duration-300 transition-all rounded-md hover:text-white font-bold hover:bg-blue px-4 py-1`}
+                  >
+                    VI
+                  </button>
+                </Link>
+                <Link activeClass='active' to='top' spy={true} smooth={true} offset={0} duration={0}>
+                  <button
+                    onClick={() => handleLanguageChange('en')}
+                    className={`${
+                      language === 'en' ? 'bg-slate-700 text-white' : ''
+                    } ml-2 duration-300 font-bold transition-all rounded-md bg-slate-100 text-black hover:bg-slate-700 hover:text-white px-4 py-1`}
+                  >
+                    ENG
+                  </button>
+                </Link>
               </div>
               <ul className='mt-10'>
                 <Li scrollTo='home' title='home' closeMenu={closeMenu} className='text-white hover:text-blue ' />
