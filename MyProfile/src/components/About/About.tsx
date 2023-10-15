@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 export default function About() {
   const { t } = useTranslation('about')
   return (
-    <div id='about' className='min-h-[100vh]'>
+    <div id='about' className='min-h-[100vh] bg-white'>
       <div className='container lg:px-8 sm:px-6 px-4 py-16 mx-auto text-center '>
         <h2 className='text-4xl font-semibold py-8 text-blue'>{t('title')}</h2>
         <div className='flex'>

@@ -12,9 +12,9 @@ export default function MyProject() {
           <h2 className='text-4xl font-semibold py-4 text-blue'>My Project</h2>
           <div className='mt-10'>
             <div className='grid grid-cols-12 gap-4'>
-              <div className='lg:col-span-4 sm:col-span-6 col-span-12'>
+              <div className='lg:col-span-4 sm:col-span-6 rounded-lg col-span-12'>
                 <Link to={projectDetailApi.shopee.path}>
-                  <div className='w-full lg:h-[370px] md:h-[320px] h-[300px]  bg-red-300'>
+                  <div className='w-full lg:h-[370px] md:h-[320px] h-[300px] overflow-hidden rounded-xl bg-red-300'>
                     <img
                       src={`${IMAGE_SHOPEE}`}
                       alt={`${IMAGE_SHOPEE}`}
@@ -25,7 +25,7 @@ export default function MyProject() {
               </div>
               <div className='lg:col-span-4 sm:col-span-6 col-span-12'>
                 <Link to={projectDetailApi.article.path}>
-                  <div className='w-full lg:h-[370px] md:h-[320px] h-[300px]  bg-red-300'>
+                  <div className='w-full lg:h-[370px] md:h-[320px] h-[300px] overflow-hidden bg-red-300'>
                     <img
                       src={`${IMAGE_ARTICLE}`}
                       alt={`${IMAGE_ARTICLE}`}
@@ -36,7 +36,7 @@ export default function MyProject() {
               </div>
               <div className='lg:col-span-4 sm:col-span-6 col-span-12'>
                 <Link to={projectDetailApi.event.path}>
-                  <div className='w-full lg:h-[370px] md:h-[320px] h-[300px]  bg-red-300'>
+                  <div className='w-full lg:h-[370px] md:h-[320px] h-[300px] overflow-hidden bg-red-300'>
                     <img
                       src={`${IMAGE_HYGEE}`}
                       alt={`${IMAGE_HYGEE}`}

@@ -1,17 +1,13 @@
-import { useEffect, useRef, useContext, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import NavHeader from 'src/components/NavHeader'
 import { Link } from 'react-scroll'
 import { CSSTransition } from 'react-transition-group'
 import 'src/sass/index.scss'
 import Loading from 'src/components/Loading'
 import Footer from 'src/components/Footer/Footer'
-import Home from '../Home/Home'
+import Home from '../../pages/Home/Home'
 
-interface Props {
-  children?: React.ReactNode
-}
-
-export default function MainLayout({ children }: Props) {
+export default function MainLayout() {
   const [loading, setLoading] = useState(true)
   const nodeRef = useRef(null)
 

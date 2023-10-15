@@ -4,7 +4,7 @@ import Main from './pages/Home'
 import ProjectDetail from './pages/ProjectDetail'
 import { projectDetailApi } from './api/projectDetail.api'
 import { useEffect } from 'react'
-import MainLayout from './pages/MainLayout'
+import MainLayout from './layouts/MainLayout'
 
 function App() {
   const location = useLocation()

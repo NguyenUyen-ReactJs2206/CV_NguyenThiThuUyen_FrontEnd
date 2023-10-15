@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
 import Loading from 'src/components/Loading'
 type Props = {
@@ -7,6 +7,7 @@ type Props = {
 export default function ProjectDetail({ content }: Props) {
   const [loading, setLoading] = useState(true)
   const nodeRef = useRef(null)
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
