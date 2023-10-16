@@ -1,5 +1,5 @@
 import React from 'react'
-import FormContact from '../FormContact'
+import FormContact from '../../../components/FormContact'
 import { useTranslation } from 'react-i18next'
 
 export default function Contact() {

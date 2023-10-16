@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction, useState } from 'react'
-import Li from '../Li'
+import Li from '../../../components/Li'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-scroll'
 

@@ -1,13 +1,13 @@
 import { Dispatch, SetStateAction, useState } from 'react'
 import 'src/sass/index.scss'
 import PopupHeader from 'src/components/PopupHeader'
-import Contact from 'src/components/Contact'
-import Hero from 'src/components/Hero'
-import About from 'src/components/About'
-import Skill from 'src/components/Skill'
-import AbilityToWork from 'src/components/AbilityToWork'
-import MyProject from 'src/components/MyProject'
-import Education from 'src/components/Education'
+import Contact from 'src/pages/Home/Contact'
+import Hero from 'src/pages/Home/Hero'
+import About from 'src/pages/Home/About'
+import Skill from 'src/pages/Home/Skill'
+import AbilityToWork from 'src/pages/Home/AbilityToWork'
+import MyProject from 'src/pages/Home/MyProject'
+import Education from 'src/pages/Home/Education'
 
 type Props = {
   setLoading: Dispatch<SetStateAction<boolean>>

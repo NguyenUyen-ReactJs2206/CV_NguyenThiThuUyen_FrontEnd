@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
-import NavHeader from 'src/components/NavHeader'
+import NavHeader from 'src/pages/Home/NavHeader'
 import { Link } from 'react-scroll'
 import { CSSTransition } from 'react-transition-group'
 import 'src/sass/index.scss'
 import Loading from 'src/components/Loading'
-import Footer from 'src/components/Footer/Footer'
+import Footer from 'src/pages/Home/Footer/Footer'
 import Home from '../../pages/Home/Home'
 
 export default function MainLayout() {
