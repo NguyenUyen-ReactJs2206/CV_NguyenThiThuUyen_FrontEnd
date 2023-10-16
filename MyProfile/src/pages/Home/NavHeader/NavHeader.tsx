@@ -62,22 +62,22 @@ export default function NavHeader({ setLoading }: Props) {
             to='top'
             spy={true}
             smooth={true}
-            duration={500}
+            duration={0}
             onClick={() => handleLanguageChange('vi')}
             className={`ml-8 p-2 uppercase text-sm cursor-pointer border-r-2 border-r-blue/40 hover:text-blue`}
           >
-            <div className={`${language === 'vi' ? 'text-red-400' : ''}`}>VI</div>
+            <div className={`${language === 'vi' ? 'font-bold ' : ''}`}>VI</div>
           </Link>
 
           <Link
             to='top'
             spy={true}
             smooth={true}
-            duration={500}
+            duration={0}
             onClick={() => handleLanguageChange('en')}
             className={` p-2 uppercase text-sm cursor-pointer hover:text-blue`}
           >
-            <div className={`${language === 'en' ? 'text-red-400' : ''}`}>EN</div>
+            <div className={`${language === 'en' ? 'font-bold ' : ''}`}>EN</div>
           </Link>
         </ul>
       </div>

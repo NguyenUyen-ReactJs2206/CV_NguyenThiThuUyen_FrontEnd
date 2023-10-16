@@ -1,8 +1,5 @@
 import { Link } from 'react-router-dom'
 import { projectDetailApi } from 'src/api/projectDetail.api'
-import IMAGE_HYGEE from 'src/assets/images/hygge-event-project.png'
-import IMAGE_SHOPEE from 'src/assets/images/shopee-project.png'
-import IMAGE_ARTICLE from 'src/assets/images/articles-project.png'
 
 export default function MyProject() {
   return (
@@ -12,7 +9,23 @@ export default function MyProject() {
           <h2 className='text-4xl font-semibold py-4 text-blue'>My Project</h2>
           <div className='mt-10'>
             <div className='grid grid-cols-12 gap-4'>
-              <div className='lg:col-span-4 sm:col-span-6 rounded-lg col-span-12'>
+              {projectDetailApi.map((projectDetail, index) => (
+                <>
+                  <div className='lg:col-span-4 sm:col-span-6 rounded-lg col-span-12' key={index}>
+                    <Link to={projectDetail.path}>
+                      <div className='w-full lg:h-[370px] md:h-[320px] h-[300px] overflow-hidden rounded-xl bg-red-300'>
+                        <img
+                          src={`${projectDetail.image}`}
+                          alt={`${projectDetail.name}`}
+                          className='w-full h-full object-cover transition-all duration-500'
+                        />
+                      </div>
+                    </Link>
+                  </div>
+                </>
+              ))}
+
+              {/* <div className='lg:col-span-4 sm:col-span-6 rounded-lg col-span-12'>
                 <Link to={projectDetailApi.shopee.path}>
                   <div className='w-full lg:h-[370px] md:h-[320px] h-[300px] overflow-hidden rounded-xl bg-red-300'>
                     <img
@@ -44,7 +57,7 @@ export default function MyProject() {
                     />
                   </div>
                 </Link>
-              </div>
+              </div> */}
             </div>
             {/* <Link to={projectDetailApi.shopee.path}>Shoppe</Link>
             <Link to={projectDetailApi.article.path}>Article</Link>
