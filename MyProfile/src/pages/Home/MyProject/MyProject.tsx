@@ -24,44 +24,7 @@ export default function MyProject() {
                   </div>
                 </>
               ))}
-
-              {/* <div className='lg:col-span-4 sm:col-span-6 rounded-lg col-span-12'>
-                <Link to={projectDetailApi.shopee.path}>
-                  <div className='w-full lg:h-[370px] md:h-[320px] h-[300px] overflow-hidden rounded-xl bg-red-300'>
-                    <img
-                      src={`${IMAGE_SHOPEE}`}
-                      alt={`${IMAGE_SHOPEE}`}
-                      className='w-full h-full object-cover transition-all duration-500'
-                    />
-                  </div>
-                </Link>
-              </div>
-              <div className='lg:col-span-4 sm:col-span-6 col-span-12'>
-                <Link to={projectDetailApi.article.path}>
-                  <div className='w-full lg:h-[370px] md:h-[320px] h-[300px] overflow-hidden bg-red-300'>
-                    <img
-                      src={`${IMAGE_ARTICLE}`}
-                      alt={`${IMAGE_ARTICLE}`}
-                      className='w-full h-full object-cover transition-all duration-500'
-                    />
-                  </div>
-                </Link>
-              </div>
-              <div className='lg:col-span-4 sm:col-span-6 col-span-12'>
-                <Link to={projectDetailApi.event.path}>
-                  <div className='w-full lg:h-[370px] md:h-[320px] h-[300px] overflow-hidden bg-red-300'>
-                    <img
-                      src={`${IMAGE_HYGEE}`}
-                      alt={`${IMAGE_HYGEE}`}
-                      className='w-full h-full object-cover transition-all duration-500'
-                    />
-                  </div>
-                </Link>
-              </div> */}
             </div>
-            {/* <Link to={projectDetailApi.shopee.path}>Shoppe</Link>
-            <Link to={projectDetailApi.article.path}>Article</Link>
-            <Link to={projectDetailApi.event.path}>Event</Link> */}
           </div>
         </div>
       </div>
