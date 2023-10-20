@@ -21,6 +21,7 @@ export const projectDetailApi = [
           'Router: React Router',
           'API: Rest API - based on the provided server',
           'Multi-language support with React.i18next',
+          'Used React Toastify to display the message and the error',
           'SEO support with React Helmet',
           'Unit Test',
           'Modeling components with story books'
@@ -36,20 +37,19 @@ export const projectDetailApi = [
     projectDetailContent: [
       {
         title: 'Hygee Event',
-        linkWeb: 'https://shopee-clone-woad.vercel.app/',
-        linkGithub: 'https://github.com/NguyenUyen-ReactJs2206/Clone_Shopee',
+        linkWeb: 'https://hygge-event.vercel.app/',
+        linkGithub: 'https://github.com/NguyenUyen-ReactJs2206/Hygge_Event',
         technologies: [
           'Framework: React Js + Type Script.',
           'Build tool: Vite.',
-          'UI / CSS Library: Tailwindcss + HeadlessUI.',
-          'State Management: React Query for async state and React Context for normal state.',
-          'Form Management: React Hook Form and validation with Yup',
+          'UI / CSS Library: Tailwindcss and SASS',
+          'State Management: React Context state.',
+          'Form Management: React Hook Form',
           'Router: React Router',
-          'API: Rest API - based on the provided server',
+          'Mockup API',
           'Multi-language support with React.i18next',
-          'SEO support with React Helmet',
-          'Unit Test',
-          'Modeling components with story books'
+          'Used React Toastify to display the message and the error',
+          'SEO support with React Helmet'
         ],
         functions: []
       }
@@ -62,20 +62,19 @@ export const projectDetailApi = [
     projectDetailContent: [
       {
         title: 'Article',
-        linkWeb: 'https://shopee-clone-woad.vercel.app/',
-        linkGithub: 'https://github.com/NguyenUyen-ReactJs2206/Clone_Shopee',
+        linkWeb: 'https://articles-app-seven.vercel.app/',
+        linkGithub: 'https://github.com/NguyenUyen-ReactJs2206/Blog_App',
         technologies: [
           'Framework: React Js + Type Script.',
           'Build tool: Vite.',
-          'UI / CSS Library: Tailwindcss + HeadlessUI.',
-          'State Management: React Query for async state and React Context for normal state.',
+          'UI / CSS Library: Tailwindcss.',
+          'State Management: React Redux Toolkit combined with AsyncThunk for async state and React Context for normal state.',
           'Form Management: React Hook Form and validation with Yup',
           'Router: React Router',
           'API: Rest API - based on the provided server',
           'Multi-language support with React.i18next',
-          'SEO support with React Helmet',
-          'Unit Test',
-          'Modeling components with story books'
+          'Used React Toastify to display the message and the error',
+          'SEO support with React Helmet'
         ],
         functions: []
       }

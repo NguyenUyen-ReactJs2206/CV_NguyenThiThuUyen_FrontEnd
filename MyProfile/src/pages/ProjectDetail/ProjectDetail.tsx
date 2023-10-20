@@ -24,9 +24,13 @@ export default function ProjectDetail({ content }: Props) {
       )}
       <CSSTransition in={!loading} timeout={1000} nodeRef={nodeRef} classNames='page' unmountOnExit>
         <div ref={nodeRef} id='top'>
-          {content.map((el, index) => (
+          {content.map((contentDetail, index) => (
             <>
-              <div key={index}>{el.title}</div>
+              <div key={index}>
+                <div className='container'>
+                  <h1>{contentDetail.title}</h1>
+                </div>
+              </div>
             </>
           ))}
         </div>
