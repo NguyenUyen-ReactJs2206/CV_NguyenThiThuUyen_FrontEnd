@@ -43,21 +43,19 @@ export default function ProjectDetail({ content }: Props) {
                 <div className='m-4'>
                   <Carousel
                     responsive={responsiveCarouselDetail}
-                    pauseOnHover={false}
-                    sliderClass='transition-duration-2000'
+                    pauseOnHover={true}
                     infinite={true}
+                    autoPlay={true}
                     arrows={true}
+                    autoPlaySpeed={3000}
                   >
-                    {/* <DetailProjectCarousel/>
-               <DetailProjectCarousel/>
-               <DetailProjectCarousel/>
-               <DetailProjectCarousel/> */}
                     {projectDetailApi.map((projectDetail, index) => (
                       <>
                         <DetailProjectCarousel
                           key={index}
                           name={projectDetail.name}
                           pathDetailProject={projectDetail.path}
+                          image={projectDetail.image}
                         />
                       </>
                     ))}

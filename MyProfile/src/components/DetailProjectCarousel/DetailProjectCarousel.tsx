@@ -3,16 +3,17 @@ import { Link } from 'react-router-dom'
 type Props = {
   name: string
   pathDetailProject: string
+  image: string
 }
-export default function DetailProjectCarousel({ name, pathDetailProject }: Props) {
+export default function DetailProjectCarousel({ name, pathDetailProject, image }: Props) {
   return (
     <div className='mx-4'>
       <div className='group relative cursor-pointer'>
         <Link to={pathDetailProject}>
           <div className='mx-auto h-[300px] w-full cursor-pointer overflow-hidden sm:h-[300px] md:h-[400px]'>
             <img
-              src='https://www.brides.com/thmb/Nb8-KQb0UbTEh9uymClKoLHhEyg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/WR-8b335c7adae842dc9f80ec3c4eaf9c48.jpg'
-              alt='concept1'
+              src={image}
+              alt={name}
               className='h-full w-full cursor-pointer object-cover shadow-sm duration-[2000ms] group-hover:scale-110 group-hover:opacity-50 group-hover:duration-[2000ms] '
             />
           </div>

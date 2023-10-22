@@ -6,7 +6,7 @@ export const responsiveCarouselDetail = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 1024 },
-    items: 2,
+    items: 3,
     slidesToSlide: 1,
     isFinite: true
   },
