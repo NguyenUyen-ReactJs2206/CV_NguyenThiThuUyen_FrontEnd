@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import 'src/sass/index.scss'
 
 type Props = {
   name: string
@@ -7,7 +8,7 @@ type Props = {
 }
 export default function DetailProjectCarousel({ name, pathDetailProject, image }: Props) {
   return (
-    <div className='mx-4'>
+    <div className=''>
       <div className='group relative cursor-pointer'>
         <Link to={pathDetailProject}>
           <div className='mx-auto h-[300px] w-full cursor-pointer overflow-hidden sm:h-[300px] md:h-[400px]'>
