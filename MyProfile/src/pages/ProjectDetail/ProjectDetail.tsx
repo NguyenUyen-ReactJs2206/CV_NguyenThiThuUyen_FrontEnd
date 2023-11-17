@@ -8,7 +8,14 @@ import 'react-multi-carousel/lib/styles.css'
 
 import Loading from 'src/components/Loading'
 type Props = {
-  content: { title: string; linkWeb: string; linkGithub: string; technologies: string[]; functions: never[] }[]
+  content: {
+    title: string
+    linkWeb: string
+    linkGithub: string
+    technologiesFE: string[]
+    functions: string[]
+    conclude: string
+  }[]
 }
 export default function ProjectDetail({ content }: Props) {
   const [loading, setLoading] = useState(true)
@@ -32,8 +39,11 @@ export default function ProjectDetail({ content }: Props) {
       <CSSTransition in={!loading} timeout={1000} nodeRef={nodeRef} classNames='page' unmountOnExit>
         <div ref={nodeRef} id='top'>
           {content.map((contentDetail, index) => (
-            <div key={index} className='min-h-[100vh] max-w-[1500px] mx-auto'>
-              <button className='mt-4 ml-1 bg-blue text-white px-4 py-2' onClick={() => navigate('/')}>
+            <div key={index} className='min-h-[100vh] pb-20 max-w-[1500px] mx-auto'>
+              <button
+                className='mt-4 ml-1 bg-blue/70 transition-all hover:duration-300 hover:bg-blue text-white px-4 py-2'
+                onClick={() => navigate('/')}
+              >
                 Back Home
               </button>
               <div className='pt-10 max-w-[1300px] mx-auto px-4'>
@@ -59,16 +69,18 @@ export default function ProjectDetail({ content }: Props) {
                       {contentDetail.linkGithub}
                     </a>
                   </div>
-                  <div className='my-2'>
-                    <h3 className='uppercase font-semibold'>Technologies: </h3>
-                    <div className='sm:mx-4 mx-2'>
-                      {contentDetail.technologies.map((technologi, index) => (
-                        <div key={index}>
-                          <p>-{technologi}</p>
-                        </div>
-                      ))}
+                  <div className='my-4'>
+                    <div className='technologis'>
+                      <h3 className='uppercase font-semibold'>Technologies: </h3>
+                      <div className='sm:mx-4 mx-2'>
+                        {contentDetail.technologiesFE.map((technologi, index) => (
+                          <div key={index}>
+                            <p>-{technologi}</p>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                    <div className='my-2'>
+                    <div className='my-2 functions'>
                       <h3 className='uppercase font-semibold'>Functions: </h3>
                       <div className='sm:mx-4 mx-2'>
                         {contentDetail.functions.map((func, index) => (
@@ -76,6 +88,12 @@ export default function ProjectDetail({ content }: Props) {
                             <p>-{func}</p>
                           </div>
                         ))}
+                      </div>
+                    </div>
+                    <div className='my-2'>
+                      <h3 className='uppercase font-semibold'>Conclude: </h3>
+                      <div className='sm:mx-4 mx-2'>
+                        <p>-{contentDetail.conclude}</p>
                       </div>
                     </div>
                   </div>

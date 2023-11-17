@@ -40,7 +40,7 @@ export const projectDetailApi = [
         title: 'Shopee',
         linkWeb: 'https://shopee-clone-woad.vercel.app/',
         linkGithub: 'https://github.com/NguyenUyen-ReactJs2206/Clone_Shopee',
-        technologies: [
+        technologiesFE: [
           'Framework: React Js + Type Script.',
           'Build tool: Vite.',
           'UI / CSS Library: Tailwindcss + HeadlessUI.',
@@ -51,10 +51,19 @@ export const projectDetailApi = [
           'Multi-language support with React.i18next',
           'Used React Toastify to display the message and the error',
           'SEO support with React Helmet',
-          'Unit Test',
-          'Modeling components with story books'
+          'Unit Test'
         ],
-        functions: []
+        functions: [
+          'Manage authentication with JWT (automatic token refresh applied)',
+          'Use the Yup and React Hook Form to validate the form.',
+          'Smart Pagination, Filter, and Product SearchIncorporate state into the URL to easily share results across devices.',
+          'Asynchronous state management with React Query.',
+          'Code Splitting',
+          'Improve performance by optimizing build file size analysis.',
+          'SEO with React HelmetSeparate the private and public routes.'
+        ],
+        conclude:
+          'Thanks to this project, it helps me understand more about logic in Website E-commerce, better understand how to manage state with React Query and many other technologies are used in the project.'
       }
     ]
   },
@@ -67,7 +76,7 @@ export const projectDetailApi = [
         title: 'Hygee Event',
         linkWeb: 'https://hygge-event.vercel.app/',
         linkGithub: 'https://github.com/NguyenUyen-ReactJs2206/Hygge_Event',
-        technologies: [
+        technologiesFE: [
           'Framework: React Js + Type Script.',
           'Build tool: Vite.',
           'UI / CSS Library: Tailwindcss and SASS',
@@ -79,7 +88,16 @@ export const projectDetailApi = [
           'Used React Toastify to display the message and the error',
           'SEO support with React Helmet'
         ],
-        functions: []
+        functions: [
+          'Build responsive websites for all screen types using Tailwind css.',
+          'Custom components to optimize performance.',
+          'Loading effect when turning pages',
+          'Use i18next for multilingual conversion for the website.',
+          'Synchronize urls for pages, user-friendly.',
+          'Receive email feedback from users and send automatic thank you letters to them.'
+        ],
+        conclude:
+          'This is a project I wrote entirely myself through the design of an event company. This project helps me gain a deeper understanding of how to write css using Tailwind Css that integrates responsive for many devices. At the same time, create a fully functional static website to introduce your business.'
       }
     ]
   },
@@ -92,7 +110,7 @@ export const projectDetailApi = [
         title: 'Article',
         linkWeb: 'https://articles-app-seven.vercel.app/',
         linkGithub: 'https://github.com/NguyenUyen-ReactJs2206/Blog_App',
-        technologies: [
+        technologiesFE: [
           'Framework: React Js + Type Script.',
           'Build tool: Vite.',
           'UI / CSS Library: Tailwindcss.',
@@ -104,7 +122,17 @@ export const projectDetailApi = [
           'Used React Toastify to display the message and the error',
           'SEO support with React Helmet'
         ],
-        functions: []
+        functions: [
+          'Manage authentication with JWT (automatic token refresh applied).',
+          'Get list article and pagination.',
+          'Asynchronous state management with Redux Toolkit.',
+          'Function to favorite articles and call favorite articles.',
+          'CRUD articles.',
+          'User profile editing function.',
+          'Synchronize urls for pages, user-friendly.'
+        ],
+        conclude:
+          'This is the main project I did to better understand how reduxToolkit works and learn how to handle asynchronous tasks in Redux using createAsyncThunk.'
       }
     ]
   }
