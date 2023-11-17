@@ -53,6 +53,7 @@ export const projectDetailApi = [
           'SEO support with React Helmet',
           'Unit Test'
         ],
+        technologiesBE: [],
         functions: [
           'Manage authentication with JWT (automatic token refresh applied)',
           'Use the Yup and React Hook Form to validate the form.',
@@ -88,6 +89,7 @@ export const projectDetailApi = [
           'Used React Toastify to display the message and the error',
           'SEO support with React Helmet'
         ],
+        technologiesBE: [],
         functions: [
           'Build responsive websites for all screen types using Tailwind css.',
           'Custom components to optimize performance.',
@@ -122,6 +124,7 @@ export const projectDetailApi = [
           'Used React Toastify to display the message and the error',
           'SEO support with React Helmet'
         ],
+        technologiesBE: [],
         functions: [
           'Manage authentication with JWT (automatic token refresh applied).',
           'Get list article and pagination.',
@@ -133,6 +136,48 @@ export const projectDetailApi = [
         ],
         conclude:
           'This is the main project I did to better understand how reduxToolkit works and learn how to handle asynchronous tasks in Redux using createAsyncThunk.'
+      }
+    ]
+  },
+
+  {
+    name: 'project social network',
+    path: '/project-social-network',
+    //`${IMAGE_SOCIAL_NETWORK}`
+    image: '',
+    projectDetailContent: [
+      {
+        title: 'Social Network',
+        linkWeb: '',
+        linkGithub: ': https://github.com/NguyenUyen-ReactJs2206/SocialNetwork',
+        technologiesFE: [
+          'Framework: React Js',
+          'Build tool: Create React App.',
+          'UI / CSS Library: Material UI.',
+          'State Management: Redux Toolkit and Redux Persist.',
+          'Form Management: Formik and validation with Yup',
+          'Router: React Router',
+          'Call API: Fetch API.',
+          'API: Rest API with self-created server.'
+        ],
+        technologiesBE: [
+          'Framework: Node Js (Express Js).',
+          'Build tool: Webpack.',
+          'Database: MongoDB.',
+          'Router in Express Js.',
+          'Encrypt the password with Bcript.',
+          'Authenticate user with JsonwebToken.',
+          'Manage file storage and uploads in MongoDB using Multer.'
+        ],
+        functions: [
+          'Manage authentication with JWT.',
+          'Dark mode for app.',
+          'Create articles.',
+          'Like articles.',
+          'Add friends.'
+        ],
+        conclude:
+          'This is a project that I researched and corrected errors along the way to better understand the combination of Back-end and Front-end.'
       }
     ]
   }

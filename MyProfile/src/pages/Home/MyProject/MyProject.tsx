@@ -10,19 +10,17 @@ export default function MyProject() {
           <div className='mt-10'>
             <div className='grid grid-cols-12 gap-4'>
               {projectDetailApi.map((projectDetail, index) => (
-                <>
-                  <div className='lg:col-span-4 sm:col-span-6 rounded-lg col-span-12' key={index}>
-                    <Link to={projectDetail.path}>
-                      <div className='w-full lg:h-[370px] md:h-[320px] h-[300px] overflow-hidden rounded-xl bg-red-300'>
-                        <img
-                          src={`${projectDetail.image}`}
-                          alt={`${projectDetail.name}`}
-                          className='w-full h-full object-cover transition-all duration-500'
-                        />
-                      </div>
-                    </Link>
-                  </div>
-                </>
+                <div className='lg:col-span-4 sm:col-span-6 rounded-lg col-span-12' key={index}>
+                  <Link to={projectDetail.path}>
+                    <div className='w-full lg:h-[370px] md:h-[320px] h-[300px] overflow-hidden rounded-xl bg-red-300'>
+                      <img
+                        src={`${projectDetail.image}`}
+                        alt={`${projectDetail.name}`}
+                        className='w-full h-full object-cover transition-all duration-500'
+                      />
+                    </div>
+                  </Link>
+                </div>
               ))}
             </div>
           </div>
