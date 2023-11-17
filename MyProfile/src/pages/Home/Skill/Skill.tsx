@@ -20,29 +20,29 @@ export default function Skill() {
             <div className='md:col-span-1 col-span-2'>
               <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium '>
                 <div className='tracking-wide'>CSS</div>
-                <div className='absolute bottom-0 left-0 h-2 w-[75%] bg-blue '></div>
-                <div className='absolute bottom-0 right-0 h-2 w-[25%] bg-slate-200 '></div>
+                <div className='absolute bottom-0 left-0 h-2 w-[80%] bg-blue '></div>
+                <div className='absolute bottom-0 right-0 h-2 w-[20%] bg-slate-200 '></div>
               </div>
             </div>
             <div className='md:col-span-1 col-span-2'>
               <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium '>
                 <div className='tracking-wide'>Java Script</div>
-                <div className='absolute bottom-0 left-0 h-2 w-[60%] bg-blue '></div>
-                <div className='absolute bottom-0 right-0 h-2 w-[40%] bg-slate-200 '></div>
+                <div className='absolute bottom-0 left-0 h-2 w-[70%] bg-blue '></div>
+                <div className='absolute bottom-0 right-0 h-2 w-[30%] bg-slate-200 '></div>
               </div>
             </div>
             <div className='md:col-span-1 col-span-2'>
               <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium '>
                 <div className='tracking-wide'>Type Script</div>
-                <div className='absolute bottom-0 left-0 h-2 w-[60%] bg-blue '></div>
-                <div className='absolute bottom-0 right-0 h-2 w-[40%] bg-slate-200 '></div>
+                <div className='absolute bottom-0 left-0 h-2 w-[70%] bg-blue '></div>
+                <div className='absolute bottom-0 right-0 h-2 w-[30%] bg-slate-200 '></div>
               </div>
             </div>
             <div className='md:col-span-1 col-span-2'>
               <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium '>
                 <div className='tracking-wide'>Tailwind CSS</div>
-                <div className='absolute bottom-0 left-0 h-2 w-[70%] bg-blue '></div>
-                <div className='absolute bottom-0 right-0 h-2 w-[30%] bg-slate-200 '></div>
+                <div className='absolute bottom-0 left-0 h-2 w-[80%] bg-blue '></div>
+                <div className='absolute bottom-0 right-0 h-2 w-[20%] bg-slate-200 '></div>
               </div>
             </div>
             <div className='md:col-span-1 col-span-2'>
@@ -54,9 +54,16 @@ export default function Skill() {
             </div>
             <div className='md:col-span-1 col-span-2'>
               <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium '>
+                <div className='tracking-wide'>MUI</div>
+                <div className='absolute bottom-0 left-0 h-2 w-[50%] bg-blue '></div>
+                <div className='absolute bottom-0 right-0 h-2 w-[50%] bg-slate-200 '></div>
+              </div>
+            </div>
+            <div className='md:col-span-1 col-span-2'>
+              <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium '>
                 <div className='tracking-wide'>React JS</div>
-                <div className='absolute bottom-0 left-0 h-2 w-[65%] bg-blue '></div>
-                <div className='absolute bottom-0 right-0 h-2 w-[35%] bg-slate-200 '></div>
+                <div className='absolute bottom-0 left-0 h-2 w-[80%] bg-blue '></div>
+                <div className='absolute bottom-0 right-0 h-2 w-[20%] bg-slate-200 '></div>
               </div>
             </div>
           </div>

@@ -34,10 +34,17 @@ function App() {
             path={projectDetailApi[2].path}
             element={<ProjectDetail content={projectDetailApi[2].projectDetailContent} />}
           />
-
           <Route
             path={projectDetailApi[3].path}
             element={<ProjectDetail content={projectDetailApi[3].projectDetailContent} />}
+          />
+          <Route
+            path={projectDetailApi[4].path}
+            element={<ProjectDetail content={projectDetailApi[4].projectDetailContent} />}
+          />
+          <Route
+            path={projectDetailApi[5].path}
+            element={<ProjectDetail content={projectDetailApi[5].projectDetailContent} />}
           />
         </Routes>
       </div>

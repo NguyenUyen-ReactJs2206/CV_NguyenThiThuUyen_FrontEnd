@@ -8,7 +8,7 @@ export default function AbilityToWork() {
         <h2 className='text-4xl mb-4 font-semibold py-4 text-center text-blue'>{t('title')}</h2>
         <div className='grid grid-cols-12 gap-4'>
           <div className='lg:col-span-4 col-span-12'>
-            <h3 className='text-lg font-bold'>HTML / CSS and Tailwind CSS / Bootstrap</h3>
+            <h3 className='text-lg font-bold'>HTML / CSS and Tailwind CSS / Bootstrap / MUI</h3>
           </div>
           <div className='lg:col-span-8 col-span-12'>
             <ul className='list-disc'>

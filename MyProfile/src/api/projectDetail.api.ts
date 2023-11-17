@@ -1,6 +1,8 @@
 import IMAGE_HYGEE from 'src/assets/images/hygge-event-project.png'
 import IMAGE_SHOPEE from 'src/assets/images/shopee-project.png'
 import IMAGE_ARTICLE from 'src/assets/images/articles-project.png'
+import IMAGE_NEWS_WEB from 'src/assets/images/news-web.png'
+import IMAGE_SELFTAUGHT from 'src/assets/images/selftaught-layout.png'
 
 export const responsiveCarouselDetail = {
   superLargeDesktop: {
@@ -139,7 +141,6 @@ export const projectDetailApi = [
       }
     ]
   },
-
   {
     name: 'project social network',
     path: '/project-social-network',
@@ -178,6 +179,39 @@ export const projectDetailApi = [
         ],
         conclude:
           'This is a project that I researched and corrected errors along the way to better understand the combination of Back-end and Front-end.'
+      }
+    ]
+  },
+  {
+    name: 'project news website',
+    path: '/project-news-website',
+    image: `${IMAGE_NEWS_WEB}`,
+    projectDetailContent: [
+      {
+        title: 'NEWS WEBSITE',
+        linkWeb: 'https://news-web-five.vercel.app/',
+        linkGithub: 'https://github.com/NguyenUyen-ReactJs2206/News_Web',
+        technologiesFE: [],
+        technologiesBE: [],
+        functions: ['This is a fully functional project of a news website.'],
+        conclude:
+          'This is a project I just learned with full functionality of a news website. The website uses Bootstrap and pure JS to help me become more proficient in Js as well as the logic processing process to create a complete website.'
+      }
+    ]
+  },
+  {
+    name: 'selftaught layout',
+    path: '/selftaught-layout',
+    image: `${IMAGE_SELFTAUGHT}`,
+    projectDetailContent: [
+      {
+        title: 'SELFTAUGHT LAYOUT',
+        linkWeb: 'https://selftaught-one.vercel.app/',
+        linkGithub: 'https://github.com/NguyenUyen-ReactJs2206/Landing_Page_Responsive/tree/main/SELFTAUGHT',
+        technologiesFE: ['Semantic HTML, CSS, SCSS'],
+        technologiesBE: [],
+        functions: ['This is just a normal layout.'],
+        conclude: 'This is a project i write in my free time to improve my CSS, SCSS writing skills.'
       }
     ]
   }

@@ -11,7 +11,7 @@ export default function DetailProjectCarousel({ name, pathDetailProject, image }
     <div className=''>
       <div className='group relative cursor-pointer'>
         <Link to={pathDetailProject}>
-          <div className='mx-auto h-[300px] w-full cursor-pointer overflow-hidden sm:h-[300px] md:h-[400px]'>
+          <div className='mx-auto h-[300px] w-full cursor-pointer overflow-hidden'>
             <img
               src={image}
               alt={name}
