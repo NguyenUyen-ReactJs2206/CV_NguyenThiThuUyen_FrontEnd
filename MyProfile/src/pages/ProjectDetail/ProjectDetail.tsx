@@ -13,7 +13,7 @@ type Props = {
     linkWeb: string
     linkGithub: string
     technologiesFE: string[]
-    technologiesBE: string[]
+    technologiesBE: string[] | string
     functions: string[]
     conclude: string
   }[]

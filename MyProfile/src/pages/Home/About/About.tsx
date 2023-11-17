@@ -15,7 +15,7 @@ export default function About() {
             className='object-cover md:block hidden md:h-[500px] md:w-[300px] lg:h-[550px] lg:w-[400px]'
           />
           <div className='text-left px-2'>
-            <h2 className='py-2 text-2xl font-semibold'>Nguyễn Thị Thu Uyên</h2>
+            <h2 className='py-2 text-2xl font-semibold'>NGUYEN THI THU UYEN</h2>
             <div className='py-1'>
               <h4 className='text-xl'> Front-end Developer</h4>
               <div className=' xl:text-xl md:text-sm lg:text-base   '>

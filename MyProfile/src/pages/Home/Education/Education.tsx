@@ -1,4 +1,4 @@
-import cvFile from 'src/assets/files/CV-Frontend-ReactJs-NguyenThiThuUyen (2).pdf'
+import cvFile from 'src/assets/files/CV-Frontend-ReactJs-NguyenThiThuUyen (4).pdf'
 import { Link } from 'react-scroll'
 import { useTranslation } from 'react-i18next'
 
