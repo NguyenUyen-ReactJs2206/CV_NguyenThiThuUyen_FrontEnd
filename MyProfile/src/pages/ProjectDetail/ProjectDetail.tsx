@@ -13,7 +13,7 @@ type Props = {
     linkWeb: string
     linkGithub: string
     technologiesFE: string[]
-    technologiesBE: string[] | string
+    technologiesBE: string[]
     functions: string[]
     conclude: string
   }[]
@@ -50,16 +50,19 @@ export default function ProjectDetail({ content }: Props) {
               <div className='pt-10 max-w-[1300px] mx-auto px-4'>
                 <h1 className='text-center text-blue uppercase font-semibold text-2xl'>{contentDetail.title}</h1>
                 <div className='content'>
-                  <div className='flex my-2'>
-                    <h3 className='uppercase font-semibold'>Website: </h3>
-                    <a
-                      href={contentDetail.linkWeb}
-                      target='_blank'
-                      className='ml-4 text-blue duration-300 hover:duration-300 hover:transition-all hover:underline'
-                    >
-                      {contentDetail.linkWeb}
-                    </a>
-                  </div>
+                  {contentDetail.linkWeb !== '' && (
+                    <div className='flex my-2'>
+                      <h3 className='uppercase font-semibold'>Website: </h3>
+                      <a
+                        href={contentDetail.linkWeb}
+                        target='_blank'
+                        className='ml-4 text-blue duration-300 hover:duration-300 hover:transition-all hover:underline'
+                      >
+                        {contentDetail.linkWeb}
+                      </a>
+                    </div>
+                  )}
+
                   <div className='flex my-2'>
                     <h3 className='uppercase font-semibold'>Github: </h3>
                     <a
@@ -71,8 +74,8 @@ export default function ProjectDetail({ content }: Props) {
                     </a>
                   </div>
                   <div className='my-4'>
-                    <div className='technologis'>
-                      <h3 className='uppercase font-semibold'>Technologies: </h3>
+                    <div className='technologisFE'>
+                      <h3 className='uppercase font-semibold'>Technologies Front-end: </h3>
                       <div className='sm:mx-4 mx-2'>
                         {contentDetail.technologiesFE.map((technologi, index) => (
                           <div key={index}>
@@ -81,6 +84,18 @@ export default function ProjectDetail({ content }: Props) {
                         ))}
                       </div>
                     </div>
+                    {contentDetail.technologiesBE.length !== 0 && (
+                      <div className='technologisBE'>
+                        <h3 className='uppercase font-semibold'>Technologies Back-end: </h3>
+                        <div className='sm:mx-4 mx-2'>
+                          {contentDetail.technologiesBE.map((technologi, index) => (
+                            <div key={index}>
+                              <p>-{technologi}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                     <div className='my-2 functions'>
                       <h3 className='uppercase font-semibold'>Functions: </h3>
                       <div className='sm:mx-4 mx-2'>
