@@ -3,7 +3,7 @@ import IMAGE_SHOPEE from 'src/assets/images/shopee-project.png'
 import IMAGE_ARTICLE from 'src/assets/images/articles-project.png'
 import IMAGE_NEWS_WEB from 'src/assets/images/news-web.png'
 import IMAGE_SELFTAUGHT from 'src/assets/images/selftaught-layout.png'
-
+import IMAGE_SOCIAL_NETWORK from 'src/assets/images/social-network-project.png'
 export const projectDetailApi = [
   {
     name: 'project shopee',
@@ -116,8 +116,8 @@ export const projectDetailApi = [
   {
     name: 'project social network',
     path: '/project-social-network',
-    //`${IMAGE_SOCIAL_NETWORK}`
-    image: '',
+
+    image: `${IMAGE_SOCIAL_NETWORK}`,
     projectDetailContent: [
       {
         title: 'Social Network',
