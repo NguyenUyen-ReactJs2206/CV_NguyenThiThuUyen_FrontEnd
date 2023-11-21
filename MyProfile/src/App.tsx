@@ -1,6 +1,5 @@
 import './App.css'
 import { Route, Routes, useLocation } from 'react-router-dom'
-import Main from './pages/Home'
 import ProjectDetail from './pages/ProjectDetail'
 import { projectDetailApi } from './api/projectDetail.api'
 import { useEffect } from 'react'

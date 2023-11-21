@@ -1,10 +1,22 @@
 import { useEffect, useRef, useState } from 'react'
-import Carousel from 'react-multi-carousel'
 import { useNavigate } from 'react-router-dom'
 import { CSSTransition } from 'react-transition-group'
 import { projectDetailApi, responsiveCarouselDetail } from 'src/api/projectDetail.api'
-import DetailProjectCarousel from 'src/components/DetailProjectCarousel'
 import 'react-multi-carousel/lib/styles.css'
+import { Link } from 'react-router-dom'
+import 'src/sass/index.scss'
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react'
+
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css/pagination'
+
+import './styles.css'
+
+// import required modules
+import { Pagination } from 'swiper/modules'
 
 import Loading from 'src/components/Loading'
 type Props = {
@@ -119,25 +131,89 @@ export default function ProjectDetail({ content }: Props) {
                 </div>
                 <div className='my-2'>
                   <h3 className='uppercase font-semibold mb-1'>More Project:</h3>
-                  <Carousel
-                    responsive={responsiveCarouselDetail}
-                    pauseOnHover={true}
-                    infinite={true}
-                    autoPlay={true}
-                    arrows={true}
-                    autoPlaySpeed={3000}
-                    itemClass='carousel-item-padding-4-px'
+
+                  <Swiper
+                    slidesPerView={3}
+                    spaceBetween={30}
+                    pagination={{
+                      clickable: true
+                    }}
+                    modules={[Pagination]}
+                    className='mySwiper'
                   >
                     {projectDetailApi.map((projectDetail, index) => (
                       <div key={index}>
-                        <DetailProjectCarousel
-                          name={projectDetail.name}
-                          pathDetailProject={projectDetail.path}
-                          image={projectDetail.image}
-                        />
+                        <SwiperSlide>
+                          <div className='group relative cursor-pointer'>
+                            <Link to={projectDetail.path}>
+                              <div className='mx-auto h-[300px] w-full cursor-pointer overflow-hidden'>
+                                <img
+                                  src={projectDetail.image}
+                                  alt={projectDetail.name}
+                                  className='h-full w-full cursor-pointer object-cover shadow-sm duration-[2000ms] group-hover:scale-110 group-hover:opacity-50 group-hover:duration-[2000ms] '
+                                />
+                              </div>
+                            </Link>
+                            <div className='absolute bottom-2 left-4 h-fit w-fit'>
+                              <div className=''>
+                                <div
+                                  className='translate-y-0 transform opacity-100 transition-all
+        duration-1000 group-hover:-translate-y-2 group-hover:opacity-100'
+                                >
+                                  <h3 className='cursor-default text-base font-medium tracking-wide text-blue sm:text-lg'>
+                                    {projectDetail.name}
+                                  </h3>
+                                  <Link to={projectDetail.path}>
+                                    <button className='underline-effect hover:underline-effect text-sm text-gray duration-300 hover:font-medium hover:text-blue/90 hover:duration-300 sm:text-base'>
+                                      Read More
+                                    </button>
+                                  </Link>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </SwiperSlide>
                       </div>
                     ))}
-                  </Carousel>
+                    {/* <SwiperSlide>
+                      <div className='group relative cursor-pointer'>
+                        <Link to={pathDetailProject}>
+                          <div className='mx-auto h-[300px] w-full cursor-pointer overflow-hidden'>
+                            <img
+                              src={image}
+                              alt={name}
+                              className='h-full w-full cursor-pointer object-cover shadow-sm duration-[2000ms] group-hover:scale-110 group-hover:opacity-50 group-hover:duration-[2000ms] '
+                            />
+                          </div>
+                        </Link>
+                        <div className='absolute bottom-2 left-4 h-fit w-fit'>
+                          <div className=''>
+                            <div
+                              className='translate-y-0 transform opacity-100 transition-all
+        duration-1000 group-hover:-translate-y-2 group-hover:opacity-100'
+                            >
+                              <h3 className='cursor-default text-base font-medium tracking-wide text-blue sm:text-lg'>
+                                {name}
+                              </h3>
+                              <Link to={pathDetailProject}>
+                                <button className='underline-effect hover:underline-effect text-sm text-gray duration-300 hover:font-medium hover:text-blue/90 hover:duration-300 sm:text-base'>
+                                  Read More
+                                </button>
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>Slide 2</SwiperSlide>
+                    <SwiperSlide>Slide 3</SwiperSlide>
+                    <SwiperSlide>Slide 4</SwiperSlide>
+                    <SwiperSlide>Slide 5</SwiperSlide>
+                    <SwiperSlide>Slide 6</SwiperSlide>
+                    <SwiperSlide>Slide 7</SwiperSlide>
+                    <SwiperSlide>Slide 8</SwiperSlide>
+                    <SwiperSlide>Slide 9</SwiperSlide> */}
+                  </Swiper>
                 </div>
               </div>
             </div>
