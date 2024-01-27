@@ -45,6 +45,10 @@ function App() {
             path={projectDetailApi[5].path}
             element={<ProjectDetail content={projectDetailApi[5].projectDetailContent} />}
           />
+          <Route
+            path={projectDetailApi[6].path}
+            element={<ProjectDetail content={projectDetailApi[6].projectDetailContent} />}
+          />
         </Routes>
       </div>
     </>

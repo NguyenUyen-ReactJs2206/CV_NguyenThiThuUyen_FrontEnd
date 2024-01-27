@@ -1,10 +1,45 @@
 import IMAGE_HYGEE from 'src/assets/images/hygge-event-project.png'
 import IMAGE_SHOPEE from 'src/assets/images/shopee-project.png'
+import IMAGE_VUE_ECOMMERCE from 'src/assets/images/vue-ecommerce.png'
 import IMAGE_ARTICLE from 'src/assets/images/articles-project.png'
 import IMAGE_NEWS_WEB from 'src/assets/images/news-web.png'
 import IMAGE_SELFTAUGHT from 'src/assets/images/selftaught-layout.png'
 import IMAGE_SOCIAL_NETWORK from 'src/assets/images/social-network-project.png'
 export const projectDetailApi = [
+  {
+    name: 'project vue ecommerce',
+    path: '/project-vue-ecommerce',
+    image: `${IMAGE_VUE_ECOMMERCE}`,
+    projectDetailContent: [
+      {
+        title: 'Vue Ecommerce',
+        linkWeb: 'https://vue-ecommerce-ts.vercel.app/',
+        linkGithub: 'https://github.com/NguyenUyen-ReactJs2206/Vue_Ecommerce',
+        technologiesFE: [
+          'Framework: Vue Js + Type Script.',
+          'Build tool: Vite.',
+          'UI / CSS Library: SASS',
+          'State Management: Pinia',
+          'Router: Vue Router',
+          'API: Rest API - based on the provided server',
+          'Used React Toastify to display the message and the error',
+          'Unit Test'
+        ],
+        technologiesBE: [],
+        functions: [
+          'Manage authentication with JWT',
+          'Use the Yup and React Hook Form to validate the form.',
+          'Smart Pagination, Filter, and Product SearchIncorporate state into the URL to easily share results across devices.',
+          'Asynchronous state management with Pinia.',
+          'Code Splitting',
+          'Improve performance by optimizing build file size analysis.',
+          'Responsive integration for screen modes.'
+        ],
+        conclude:
+          'Thanks to this project, I learned how to organize projects in a structured and clear way with VueJs combined with TypeScript. At the same time, I can apply responsive design techniques so that my app works across a variety of devices and screens.          '
+      }
+    ]
+  },
   {
     name: 'project shopee',
     path: '/project-shopee',

@@ -66,6 +66,13 @@ export default function Skill() {
                 <div className='absolute bottom-0 right-0 h-2 w-[20%] bg-slate-200 '></div>
               </div>
             </div>
+            <div className='md:col-span-1 col-span-2'>
+              <div className='relative mb-2 flex justify-between py-2 text-sm font-semibold text-black sm:mb-4 sm:text-base lg:font-medium '>
+                <div className='tracking-wide'>Vue JS</div>
+                <div className='absolute bottom-0 left-0 h-2 w-[60%] bg-blue '></div>
+                <div className='absolute bottom-0 right-0 h-2 w-[40%] bg-slate-200 '></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
